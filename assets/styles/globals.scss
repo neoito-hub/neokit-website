@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Roboto;
+  src: url("../font/Roboto-Bold.woff") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../font/Roboto-Medium.woff") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../font/Roboto-Regular.woff") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../font/Roboto-Light.woff") format("opentype");
+  font-weight: 300;
+}
+button {
+  outline: none;
+}
+body {
+  font-family: "Roboto" !important;
+}
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.layout-height {
+  max-height: calc(100vh - 108px);
+}
+
+
+// button
+.button-inherit{
+  font-size:inherit;
+  font-family: inherit;
+  color:inherit;
+  background-color: inherit;
+}
+
+// progress bar
+.progress-bar-value {
+  animation: indeterminateAnimation 1s infinite linear;
+  transform-origin: 0% 50%;
+}
+
+@keyframes indeterminateAnimation {
+  0% {
+    transform:  translateX(0) scaleX(0);
+  }
+  40% {
+    transform:  translateX(0) scaleX(0.4);
+  }
+  100% {
+    transform:  translateX(100%) scaleX(0.5);
+  }
+}
+.tag-limit{
+  max-width:10ch;
+}
+
+
+// input[type=range]::-moz-range-thumb {
+//   background-color: green;
+// }
+
+  // input:checked + svg {
+  // 	display: block;
+  // }
+
+  .custom-label input:checked + svg {
+    display: block !important;
+    cursor: pointer;
+  }
