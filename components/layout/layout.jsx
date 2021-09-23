@@ -37,7 +37,7 @@ import { useRouter } from 'next/router'
                 </div>
                 <span className="text-gray-900  text-2xl mx-2 font-semibold">NEO-KIT</span>
             </div>
-            <nav className="mt-10 px-5 ">
+            <nav className="mt-10 px-5 side-nav overflow-y-hidden hover:overflow-y-auto custom-scroll-bar pb-10 ">
                <Link href="/avatar">  
                    <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
                     "/avatar"
@@ -93,6 +93,12 @@ import { useRouter } from 'next/router'
                     <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
                     "/tag"
                   )+ ' text-'+themeColor } `}> <span className="mx-3">Tag</span> </a>
+                </Link>
+                <Link href="/textarea"
+                    >  
+                    <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
+                    "/textarea"
+                  )+ ' text-'+themeColor } `}> <span className="mx-3">Text area</span> </a>
                 </Link>
     
 

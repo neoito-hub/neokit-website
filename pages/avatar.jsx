@@ -4,24 +4,44 @@ import PageData from "../components/page-data/page-data";
 import Snipet from "../components/snippet/snipet";
 
 function Avatar() {
-  const avatarDefault =(`
+  const avatarDefaultHeight = `
     import React from 'react';
     import Avatars from '@neoKit/avatar';
 
-    const AvatarDefaultExample = () => {
+    const AvatarDefaultHeightExample = () => {
     return(<div>
-    <Avatars width={75} height={75} path={"assets/avatar.svg"} /> 
-    <Avatars width={75} height={75} path={"assets/avatar.svg"}  />
-    <Avatars width={75} height={75} path={"assets/avatar.svg"}/>
-    <Avatars width={75} height={75} path={"assets/avatar.svg"} 
+      <Avatars size='xxlarge' path={"assets/avatar.svg"} />
+      <Avatars size='xlarge' path={"assets/avatar.svg"} />
+      <Avatars size='large' path={"assets/avatar.svg"} />
+      <Avatars size='medium' path={"assets/avatar.svg"} />
+      <Avatars size='small' path={"assets/avatar.svg"} />
   />
   </div>
   );
 };
 
-export default AvatarDefaultExample;
-`);
-const avatarStatus =(`
+export default AvatarDefaultHeightExample;
+`;
+
+  const avatarCustomHeight = `
+    import React from 'react';
+    import Avatars from '@neoKit/avatar';
+
+    const AvatarCustomHeightExample = () => {
+    return(<div>
+      <Avatars width={100} height={100} path={"assets/avatar.svg"} />
+      <Avatars width={75} height={75} path={"assets/avatar.svg"} />
+      <Avatars width={50} height={50} path={"assets/avatar.svg"} />
+      <Avatars width={25} height={25} path={"assets/avatar.svg"} />
+      <Avatars width={15} height={15} path={"assets/avatar.svg"} />
+  />
+  </div>
+  );
+};
+
+export default AvatarCustomHeightExample;
+`;
+  const avatarStatus = `
 import React from 'react';
 import Avatars from '@neoKit/avatar';
 
@@ -37,9 +57,9 @@ return (
 };
 
 export default AvatarStatusExample;
-`);
+`;
 
-const avatarImageStatus =(`
+  const avatarImageStatus = `
 import React from 'react';
 import Avatars from '@neoKit/avatar';
 
@@ -54,9 +74,7 @@ return (
 };
 
 export default AvatarImageStatusExample;
-`);
-
-
+`;
 
   return (
     <div className='flex flex-col  w-full flex-start'>
@@ -67,17 +85,40 @@ export default AvatarImageStatusExample;
 
       {/* size */}
 
-      <PageData subTitle='Sizes' subDescription='' />
+      <PageData subTitle='Size' subDescription='' />
+
+      <h5 className='lg:text-lg md:text-base text-sm text-primary font-normal pb-3'>
+        {" "}
+        Default Size{" "}
+      </h5>
+      <div className='flex flex-wrap items-center gap-5'>
+        <Avatars size='xxlarge' path={"assets/avatar.svg"} />
+        <Avatars size='xlarge' path={"assets/avatar.svg"} />
+        <Avatars size='large' path={"assets/avatar.svg"} />
+        <Avatars size='medium' path={"assets/avatar.svg"} />
+        <Avatars size='small' path={"assets/avatar.svg"} />
+      </div>
+
+      <div className='w-full pt-3'>
+        <Snipet code={avatarDefaultHeight} />
+      </div>
+
+      <h5 className='lg:text-lg md:text-base text-sm text-primary font-normal pb-3 pt-2'>
+        
+        Custom Size
+      </h5>
       <div className='flex flex-wrap items-center gap-5'>
         <Avatars width={100} height={100} path={"assets/avatar.svg"} />
         <Avatars width={75} height={75} path={"assets/avatar.svg"} />
         <Avatars width={50} height={50} path={"assets/avatar.svg"} />
         <Avatars width={25} height={25} path={"assets/avatar.svg"} />
+        <Avatars width={15} height={15} path={"assets/avatar.svg"} />
       </div>
 
       <div className='w-full pt-3'>
-        <Snipet code={avatarDefault} />
+        <Snipet code={avatarCustomHeight} />
       </div>
+
       {/* status */}
 
       <PageData subTitle='Status' subDescription='' />

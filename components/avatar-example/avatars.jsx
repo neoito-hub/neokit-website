@@ -7,7 +7,8 @@ function Avatars({
   status,
   position,
   color,
-  statusImage
+  statusImage,
+  size
 }) {
   // const [statusPosition , setStatusPosition] = useState("")
   // const [number , setnumber] = useState(0)
@@ -28,8 +29,44 @@ function Avatars({
   }, []);
 
   const getProps = () => {
-    width ? setWidth(width) : "";
-    height ? setHeight(height) : "";
+    if (size) {
+      
+      switch (size) {
+        case "small": {
+           setWidth("15");
+           setHeight("15");
+           break;
+        }
+        case "medium": {
+           setWidth("25");
+           setHeight("25");
+           break;
+        }
+        case "large": {
+           setWidth("50");
+           setHeight("50");
+           break;
+        }
+        case "xlarge": {
+           setWidth("75");
+           setHeight("75");
+           break;
+        }
+        case "xxlarge": {
+          setWidth("100");
+          setHeight("100");
+          break;
+       }
+ 
+        default:
+          setWidth("20");
+          setHeight("20");
+          break;
+      }
+    } else {
+      width ? setWidth(width) : " ";
+      height ? setHeight(height) : "";
+    }
     path ? setPath(path) : "";
     status ? setStatus(status) : "";
     color ? setColor(color) : "";
@@ -69,8 +106,8 @@ function Avatars({
             )))}
         <img
           src={avatarpath}
-          width={width}
-          height={height}
+          width={avatarWidth}
+          height={avatarHeight}
           className='max-w-max object-cover'
         ></img>
       </div>

@@ -101,7 +101,10 @@ function Tag() {
             '
         />
         <div className='py-2'>
-          <Tags> Tag</Tags>
+          <Tags> 
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque dolore recusandae quo obcaecati sapiente rerum reprehenderit, odio, suscipit soluta inventore illo dolorum architecto amet pariatur eum quod eos! Odit, deleniti!
+          </Tags>
+
         </div>
         <div className='w-full pt-3'>
           <Snipet code={defaultTag} />
