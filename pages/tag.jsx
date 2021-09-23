@@ -208,7 +208,6 @@ function Tag() {
           <Snipet code={colorsTagLink} />
         </div>
       </section>
-
     </div>
   );
 }
