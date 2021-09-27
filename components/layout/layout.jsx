@@ -82,6 +82,12 @@ import { useRouter } from 'next/router'
                     "/progress-bar"
                   )+ ' text-'+themeColor } `}> <span className="mx-3">Progress bar</span> </a>
                 </Link>
+                <Link href="/progress-indicator"
+                    >  
+                    <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
+                    "/progress-indicator"
+                  )+ ' text-'+themeColor } `}> <span className="mx-3">Progress indicator</span> </a>
+                </Link>
                 <Link href="/range"
                     >  
                     <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
@@ -99,6 +105,12 @@ import { useRouter } from 'next/router'
                     <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
                     "/textarea"
                   )+ ' text-'+themeColor } `}> <span className="mx-3">Text area</span> </a>
+                </Link>
+                <Link href="/toggle"
+                    >  
+                    <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
+                    "/toggle"
+                  )+ ' text-'+themeColor } `}> <span className="mx-3">Toggle</span> </a>
                 </Link>
     
 

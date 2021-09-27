@@ -55,6 +55,11 @@ function Buttons({
     } else if (isLoading) {
     }
   };
+  const  buttonClick=()=>{
+
+  
+  }
+
   return (
     <div>
       {(appearance && appearance === "link") ||
@@ -63,8 +68,9 @@ function Buttons({
           <button
             type='button'
             tabIndex='0'
+            onClick={()=> buttonClick()}
             className={
-              "focus:outline-none rounded items-baseline inline-flex px-2.5  w-auto align-middle cursor-pointer truncate text-center  font-medium py-1.5 text-sm tracking-wide " +
+              `focus:outline-none rounded items-baseline inline-flex px-2.5  w-auto align-middle cursor-pointer truncate text-center  font-medium py-1.5 text-sm tracking-wide  ${isDisabled ?  'text-gray-700 cursor-not-allowed  bg-gray-300 opacity-60 ': '' }  ` +
               buttonColor +
               buttonBGColor
             }
@@ -78,10 +84,11 @@ function Buttons({
         <button
           type='button'
           tabIndex='0'
+          onClick={()=> buttonClick()}
           className={
             `rounded items-baseline inline-flex px-2.5   align-middle  truncate text-center  font-medium py-1.5 text-sm tracking-wide focus:outline-none ${
               isLoading ? " cursor-default" : "cursor-pointer "
-            }  ${shouldFitContainer ? " w-full" : " w-auto "}` +
+            }  ${shouldFitContainer ? " w-full" : " w-auto "}  ${isDisabled ?  'text-gray-700 cursor-not-allowed  bg-gray-300 opacity-60 ': '' } ` +
             buttonColor +
             buttonBGColor
           }
