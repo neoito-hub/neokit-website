@@ -106,11 +106,24 @@ import { useRouter } from 'next/router'
                     "/textarea"
                   )+ ' text-'+themeColor } `}> <span className="mx-3">Text area</span> </a>
                 </Link>
+                <Link href="/textfield"
+                    >  
+                    <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
+                    "/textfield"
+                  )+ ' text-'+themeColor } `}> <span className="mx-3">Text field</span> </a>
+                </Link>
                 <Link href="/toggle"
                     >  
                     <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
                     "/toggle"
                   )+ ' text-'+themeColor } `}> <span className="mx-3">Toggle</span> </a>
+                </Link>
+
+                <Link href="/tooltip"
+                    >  
+                    <a   className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${getLocation(
+                    "/tooltip"
+                  )+ ' text-'+themeColor } `}> <span className="mx-3">Tooltip</span> </a>
                 </Link>
     
 

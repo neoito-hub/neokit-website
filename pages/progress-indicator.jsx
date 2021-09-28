@@ -8,7 +8,7 @@ function ProgressIndicator() {
   const defaultIndicator = `
   import React, { useState } from "react";
   import ProgressIndicators from "@neoKit/progressIndicator";
-  import Buttons from "../components/button-example/buttons";
+  import Buttons from "@neoKit/buttons";
   function DefaultIndicator() {
           const [selectedIndex, setSelectedIndex] = useState(3);
           const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -51,7 +51,7 @@ onChange={(values) => setSelectedIndex(values)}
   const primaryIndicator = `
   import React, { useState } from "react";
   import ProgressIndicators from "@neoKit/progressIndicator";
-  import Buttons from "../components/button-example/buttons";
+  import Buttons from "@neoKit/buttons";
   function PrimaryIndicator() {
           const [selectedIndex, setSelectedIndex] = useState(3);
           const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -95,7 +95,7 @@ return (
   const helpIndicator = `
             import React, { useState } from "react";
             import ProgressIndicators from "@neoKit/progressIndicator";
-            import Buttons from "../components/button-example/buttons";
+            import Buttons from "@neoKit/buttons";
             function HelpIndicator() {
                     const [selectedIndex, setSelectedIndex] = useState(3);
                     const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -139,7 +139,7 @@ return (
   const invertedIndicator = `
 import React, { useState } from "react";
 import ProgressIndicators from "@neoKit/progressIndicator";
-import Buttons from "../components/button-example/buttons";
+import Buttons from "@neoKit/buttons";
 function InvertedProgressIndicator() {
         const [selectedIndex, setSelectedIndex] = useState(3);
         const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -183,7 +183,7 @@ export default  InvertedProgressIndicator;
   const smallIndicator = `
 import React, { useState } from "react";
 import ProgressIndicators from "@neoKit/progressIndicator";
-import Buttons from "../components/button-example/buttons";
+import Buttons from "@neoKit/buttons";
 function SmallProgressIndicator() {
         const [selectedIndex, setSelectedIndex] = useState(3);
         const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -228,7 +228,7 @@ export default  SmallProgressIndicator;
   const defaultSizeIndicator = `
 import React, { useState } from "react";
 import ProgressIndicators from "@neoKit/progressIndicator";
-import Buttons from "../components/button-example/buttons";
+import Buttons from "@neoKit/buttons";
 function DefaultProgressIndicator() {
         const [selectedIndex, setSelectedIndex] = useState(3);
         const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -272,7 +272,7 @@ export default  DefaultProgressIndicator;
   const largeProgress = `
   import React, { useState } from "react";
   import ProgressIndicators from "@neoKit/progressIndicator";
-  import Buttons from "../components/button-example/buttons";
+  import Buttons from "@neoKit/buttons";
   function LargeProgressIndicator() {
           const [selectedIndex, setSelectedIndex] = useState(3);
           const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -317,7 +317,7 @@ export default  LargeProgressIndicator;
   const comfortableProgress = `
 import React, { useState } from "react";
   import ProgressIndicators from "@neoKit/progressIndicator";
-  import Buttons from "../components/button-example/buttons";
+  import Buttons from "@neoKit/buttons";
   function ComfortableProgressIndicator() {
           const [selectedIndex, setSelectedIndex] = useState(3);
           const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -362,7 +362,7 @@ export default  ComfortableProgressIndicator;
   const cozyProgress = `
 import React, { useState } from "react";
   import ProgressIndicators from "@neoKit/progressIndicator";
-  import Buttons from "../components/button-example/buttons";
+  import Buttons from "@neoKit/buttons";
   function CozyProgressIndicator() {
           const [selectedIndex, setSelectedIndex] = useState(3);
           const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -405,7 +405,7 @@ export default  CozyProgressIndicator;
   const compactProgress = `
 import React, { useState } from "react";
   import ProgressIndicators from "@neoKit/progressIndicator";
-  import Buttons from "../components/button-example/buttons";
+  import Buttons from "@neoKit/buttons";
   function CompactProgressIndicator() {
           const [selectedIndex, setSelectedIndex] = useState(3);
           const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -448,7 +448,7 @@ export default CompactProgressIndicator;
   const interactionProgress = `
   import React, { useState } from "react";
     import ProgressIndicators from "@neoKit/progressIndicator";
-    import Buttons from "../components/button-example/buttons";
+    import Buttons from "@neoKit/buttons";
     function InteractionProgressIndicator() {
             const [selectedIndex, setSelectedIndex] = useState(3);
             const [values, setValues] = useState(["one", "two", "three", "four"]);
@@ -539,8 +539,8 @@ export default InteractionProgressIndicator;
         />
         <div className='py-2'>
           <div className='flex justify-between items-center'>
-            <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}> Prev </Buttons>
+            <span >
+              <Buttons isDisabled={selectedIndex === 2} onClick={() => dotPrevClicked()}> Prev </Buttons>
             </span>
 
             <ProgressIndicators
@@ -582,8 +582,8 @@ export default InteractionProgressIndicator;
               onChange={(values) => setSelectedIndex(values)}
             />
 
-            <span onClick={() => dotNextClicked()}>
-              <Buttons isDisabled={selectedIndex === values.length}>
+            <span >
+              <Buttons isDisabled={selectedIndex === values.length} onClick={() => dotNextClicked()}>
                 Next
               </Buttons>
             </span>

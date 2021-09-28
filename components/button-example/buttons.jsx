@@ -11,7 +11,8 @@ function Buttons({
   isLoading,
   shouldFitContainer,
   icon,
-  position
+  position,
+  ...props
 }) {
   const [buttonColor, setButtonColor] = useState("");
   const [buttonBGColor, setButtonBGColor] = useState("");
@@ -84,11 +85,11 @@ function Buttons({
         <button
           type='button'
           tabIndex='0'
-          onClick={()=> buttonClick()}
+           {...props}
           className={
             `rounded items-baseline inline-flex px-2.5   align-middle  truncate text-center  font-medium py-1.5 text-sm tracking-wide focus:outline-none ${
               isLoading ? " cursor-default" : "cursor-pointer "
-            }  ${shouldFitContainer ? " w-full" : " w-auto "}  ${isDisabled ?  'text-gray-700 cursor-not-allowed  bg-gray-300 opacity-60 ': '' } ` +
+            }  ${shouldFitContainer ? " w-full" : " w-auto "}  ${isDisabled ?  appearance === "primary" ? ' text-white  cursor-not-allowed  bg-gray-300 opacity-60 ' : 'text-gray-700 cursor-not-allowed  bg-gray-300 opacity-60 ': '' } ` +
             buttonColor +
             buttonBGColor
           }
