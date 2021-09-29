@@ -101,10 +101,7 @@ function Tag() {
             '
         />
         <div className='py-2'>
-          <Tags> 
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque dolore recusandae quo obcaecati sapiente rerum reprehenderit, odio, suscipit soluta inventore illo dolorum architecto amet pariatur eum quod eos! Odit, deleniti!
-          </Tags>
-
+          <Tags>Tag</Tags>
         </div>
         <div className='w-full pt-3'>
           <Snipet code={defaultTag} />
@@ -206,6 +203,20 @@ function Tag() {
           </Tags>
           <Tags color='teal'> Teal Tag</Tags>
           <Tags color='black'> Black Tag</Tags>
+        </div>
+        <div className='w-full pt-3'>
+          <Snipet code={colorsTagLink} />
+        </div>
+      </section>
+      {/* Text max length
+       */}
+      <section>
+        <PageData
+          subTitle='Text max length'
+          subDescription='Once the text reaches 200px, it is truncated with an ellipsis.'
+        />
+        <div className='py-2 h-8'>
+        <Tags>Croissant tiramisu gummi bears.</Tags>
         </div>
         <div className='w-full pt-3'>
           <Snipet code={colorsTagLink} />

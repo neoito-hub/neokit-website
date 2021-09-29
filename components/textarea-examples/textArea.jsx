@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 function TextArea({
-  name,
-  id,
   value,
   rows,
   cols,
-  placeholder,
   resize,
   maxHeight,
-  onChange
+  ...props
 }) {
   const [textareaSize, setTextareaSize] = useState({
     row: "2",
@@ -40,7 +37,6 @@ function TextArea({
     }
   };
   const handleChange = (event) => {
-    onChange(event.target.value);
     if (!resize || resize.trim() === "smart" || resize.trim() === "default") {
       event.target.style.height = "inherit";
       event.target.style.height = `${event.target.scrollHeight}px`;
@@ -50,7 +46,7 @@ function TextArea({
   return (
     <div className='flex w-full flex-col'>
       <textarea
-        className={`focus:outline-none p-3 ${
+        className={`focus:outline-none p-3 hover:bg-gray-100 focus:bg-transparent ${
           textareaStyle
             ? " overflow-hidden resize-none "
             : resize === "vertical"
@@ -64,13 +60,11 @@ function TextArea({
             : "resize-none"
         }`}
         style={{ maxHeight: textareaDefault, height: "auto" }}
-        name={name}
-        id={id}
         value={value}
-        placeholder={placeholder}
         rows={textareaSize.row}
         cols={textareaSize.col}
-        onChange={(event) => handleChange(event)}
+        {...props}
+        onKeyDown={(event) => handleChange(event)}
       />
     </div>
   );

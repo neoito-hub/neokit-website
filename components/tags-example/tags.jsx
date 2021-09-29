@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Tags({ children, href, removable , position ,rounded ,color}) {
+function Tags({ children, href, removable , position ,rounded ,color , maxLength}) {
   const [tagsState, setTagsState] = useState("");
   const [tagsRemove, setTagRemove] = useState(true);
   const [tagsColors, setTagColor] = useState('');
@@ -40,10 +40,10 @@ function Tags({ children, href, removable , position ,rounded ,color}) {
         >
           <a
             href={href}
-            className={` flex items-center justify-center gap-1 ${
+            className={` flex items-center justify-center gap-1 truncate ${
               href ? "hover:underline text-blue-500 " : "no-underline"
             } ${!position || position === 'before' ? 'flex-row' : 'flex-row-reverse' }`}
-            style={{color: tagsColors ? tagsColors : ''}}
+            style={{color: tagsColors ? tagsColors : '' , maxWidth: maxLength? maxLength : '200px'}}
           >
             {children}
           </a>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import PageData from "../components/page-data/page-data";
 import Snipet from "../components/snippet/snipet";
-import TextArea from "../components/textAreaExample/textArea";
+import TextArea from "../components/textarea-examples/textArea";
+
 
 function Textarea() {
   const defaultextarea = `
@@ -10,7 +11,7 @@ import TextArea from '@neoKit/textarea';
 
 export textareaDefault () => (
   <div>
-  <TextArea name='default' id='textarea'  rows='2' cols='10' resize='auto' placeholder='enter your text' value={values} onChange={(value) => setValues(value)} maxHeight='20vh'
+  <TextArea name='default' id='textarea'  rows='2' cols='10' resize='auto' placeholder='enter your text' value={values}  onChange={(event) => setValues(event.target.value)} maxHeight='20vh'
 ></TextArea>
   </div>
 );
@@ -21,7 +22,7 @@ export textareaDefault () => (
   
   export TextareaPlaceholderExample () => (
     <div>
-    <TextArea name='default'  id='textarea' rows='2' cols='10' resize='auto' placeholder='Enter your text' onChange={(value) => setValues(value)} maxHeight='20vh'></TextArea>
+    <TextArea name='default'  id='textarea' rows='2' cols='10' resize='auto' placeholder='Enter your text'  onChange={(event) => setValues(event.target.value)} maxHeight='20vh'></TextArea>
     </div>
   );
       `;
@@ -37,7 +38,7 @@ export textareaDefault () => (
               id='textarea'
               resize='auto'
               placeholder='Enter your text'
-              onChange={(value) => setValues(value)}
+               onChange={(event) => setValues(event.target.value)}
               maxHeight='20vh'
             ></TextArea>
       </div>
@@ -54,7 +55,7 @@ export textareaDefault () => (
           id='textarea'
           resize='vertical'
           placeholder='Enter your text'
-          onChange={(value) => setValues(value)}
+           onChange={(event) => setValues(event.target.value)}
           maxHeight='20vh'
         ></TextArea>
           </div>
@@ -72,7 +73,7 @@ export textareaDefault () => (
               id='textarea'
               resize='horizontal'
               placeholder='Enter your text'
-              onChange={(value) => setValues(value)}
+               onChange={(event) => setValues(event.target.value)}
               maxHeight='20vh'
             ></TextArea>
               </div>
@@ -89,7 +90,7 @@ export textareaDefault () => (
                         id='textarea'
                         resize='none'
                         placeholder='Enter your text'
-                        onChange={(value) => setValues(value)}
+                         onChange={(event) => setValues(event.target.value)}
                         maxHeight='20vh'
                 ></TextArea>
                   </div>
@@ -107,7 +108,7 @@ export textareaDefault () => (
                       id='textarea'
                       resize='smart'
                       placeholder='Enter your text'
-                      onChange={(value) => setValues(value)}
+                       onChange={(event) => setValues(event.target.value)}
                       maxHeight='20vh'
                     ></TextArea>
                       </div>
@@ -132,9 +133,9 @@ export textareaDefault () => (
             rows='2'
             cols='10'
             resize='auto'
-            placeholder='enter your text'
+            placeholder='Enter your text'
             value={values}
-            onChange={(value) => setValues(value)}
+            onChange={(event) => setValues(event.target.value)}
             maxHeight='20vh'
           ></TextArea>
         </div>
@@ -156,7 +157,7 @@ export textareaDefault () => (
             cols='10'
             resize='auto'
             placeholder='Enter your text'
-            onChange={(value) => setValues(value)}
+            onChange={(event) => setValues(event.target.value)}
             maxHeight='20vh'
           ></TextArea>
         </div>
@@ -182,7 +183,7 @@ export textareaDefault () => (
               id='textarea'
               resize='auto'
               placeholder='Enter your text'
-              onChange={(value) => setValues(value)}
+              onChange={(event) => setValues(event.target.value)}
               maxHeight='20vh'
             ></TextArea>
           </div>
@@ -203,7 +204,7 @@ export textareaDefault () => (
                 id='textarea'
                 resize='vertical'
                 placeholder='Enter your text'
-                onChange={(value) => setValues(value)}
+                onChange={(event) => setValues(event.target.value)}
                 maxHeight='20vh'
               ></TextArea>
             </div>
@@ -223,7 +224,7 @@ export textareaDefault () => (
                 id='textarea'
                 resize='horizontal'
                 placeholder='Enter your text'
-                onChange={(value) => setValues(value)}
+                onChange={(event) => setValues(event.target.value)}
                 maxHeight='20vh'
               ></TextArea>
             </div>
@@ -243,7 +244,7 @@ export textareaDefault () => (
                 id='textarea'
                 resize='none'
                 placeholder='Enter your text'
-                onChange={(value) => setValues(value)}
+                onChange={(event) => setValues(event.target.value)}
                 maxHeight='20vh'
               ></TextArea>
             </div>
@@ -264,7 +265,7 @@ export textareaDefault () => (
                 id='textarea'
                 resize='smart'
                 placeholder='Enter your text'
-                onChange={(value) => setValues(value)}
+                onChange={(event) => setValues(event.target.value)}
                 maxHeight='20vh'
               ></TextArea>
             </div>

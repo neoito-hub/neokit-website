@@ -108,7 +108,8 @@ function Avatars({
           src={avatarpath}
           width={avatarWidth}
           height={avatarHeight}
-          className='max-w-max object-cover'
+          className='max-w-max object-cover rounded-full'
+          style={{width:avatarWidth+'px' , height:avatarHeight+"px" }}
         ></img>
       </div>
     </div>

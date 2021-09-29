@@ -88,6 +88,10 @@ textarea {
   max-width: calc(100% - 10px);
   // max-height:20vh;
   border: 2px solid #dfe1e6;
+}
+
+textarea, 
+input {
   &:focus {
     border: 2px solid #4c9aff;
   }
