@@ -101,7 +101,7 @@ function Tag() {
             '
         />
         <div className='py-2'>
-          <Tags>Tag</Tags>
+          <Tags text="Tag"></Tags>
         </div>
         <div className='w-full pt-3'>
           <Snipet code={defaultTag} />
@@ -115,7 +115,7 @@ function Tag() {
           subDescription=' A tag with an href can link to more information on the tagged item. '
         />
         <div className='py-2'>
-          <Tags href='/home'>Tag link</Tags>
+          <Tags href='/home' text="Tag link"></Tags>
         </div>
         <div className='w-full pt-3'>
           <Snipet code={tagLink} />
@@ -129,7 +129,7 @@ function Tag() {
           subDescription='Once a tag has been removed, it cannot be re-rendered. Removable tags are visible in "edit" mode or in multi-select controls. '
         />
         <div className='py-2 h-8'>
-          <Tags removable>Removable tag</Tags>
+          <Tags text="Removable tag"  removable ></Tags>
         </div>
         <div className='w-full pt-3'>
           <Snipet code={removableTag} />
@@ -143,8 +143,8 @@ function Tag() {
           subDescription='A removable tag with an href can link to more information.'
         />
         <div className='py-2 h-8'>
-          <Tags removable href='/'>
-            Removable tag link
+          <Tags text="Removable tag link" removable href='/'>
+            
           </Tags>
         </div>
         <div className='w-full pt-3'>
@@ -159,9 +159,9 @@ function Tag() {
           subDescription='Rounded tags with an avatar are used to add or remove people in multi-select controls.'
         />
         <div className='py-2 h-8'>
-          <Tags removable position='after' rounded>
+          <Tags text="  Removable tag" removable position='before' rounded>
             <Avatars width={20} height={20} path={"assets/avatar.svg"} />
-            Removable tag link
+          
           </Tags>
         </div>
         <div className='w-full pt-3'>
@@ -177,9 +177,8 @@ function Tag() {
           subDescription='A rounded tag with an avatar can link to more information.'
         />
         <div className='py-2 h-8'>
-          <Tags removable position='after' rounded href='/'>
+          <Tags text="Removable tag link" removable position='after' rounded href='/'>
             <Avatars width={20} height={20} path={"assets/avatar.svg"} />
-            Removable tag link
           </Tags>
         </div>
         <div className='w-full pt-3'>
@@ -196,13 +195,10 @@ function Tag() {
           '
         />
         <div className='py-2 h-8 flex gap-2'>
-          <Tags color='standard'> standard Tag</Tags>
-          <Tags color='green' href='/'>
-            {" "}
-            Green Tag
-          </Tags>
-          <Tags color='teal'> Teal Tag</Tags>
-          <Tags color='black'> Black Tag</Tags>
+          <Tags text="standard Tag" color='standard'> </Tags>
+          <Tags text="Green Tag" color='green' href='/'> </Tags>
+          <Tags text="Teal Tag" color='teal'> </Tags>
+          <Tags text="Black Tag" color='black'> </Tags>
         </div>
         <div className='w-full pt-3'>
           <Snipet code={colorsTagLink} />
@@ -216,7 +212,7 @@ function Tag() {
           subDescription='Once the text reaches 200px, it is truncated with an ellipsis.'
         />
         <div className='py-2 h-8'>
-        <Tags>Croissant tiramisu gummi bears.</Tags>
+        <Tags text="Croissant tiramisu gummi bears."></Tags>
         </div>
         <div className='w-full pt-3'>
           <Snipet code={colorsTagLink} />

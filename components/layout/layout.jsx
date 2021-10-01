@@ -13,8 +13,8 @@ const Layout = ({ children }) => {
 
   const getLocation = (currentLocation) => {
     return currentLocation.includes(router.pathname)
-      ? "text-white bg-" + themeColor
-      : "";
+      ? "text-white hover:text-opacity-100 bg-" + themeColor
+      : " hover:text-opacity-75 text-"+themeColor;
   };
 
   return (
@@ -62,8 +62,8 @@ const Layout = ({ children }) => {
           <nav className='mt-10 px-5 side-nav overflow-y-hidden hover:overflow-y-auto custom-scroll-bar pb-10 '>
             <Link href='/avatar'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/avatar") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/avatar")
                 } `}
               >
 
@@ -74,8 +74,8 @@ const Layout = ({ children }) => {
             <Link href='/badge'>
               <a
                 href='/badge'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/badge") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/badge")
                 } `}
               >
 
@@ -85,8 +85,8 @@ const Layout = ({ children }) => {
             <Link href='/banner'>
               <a
                 href='/banner'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/banner") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50 hover:text-opacity-75  rounded ${
+                  getLocation("/banner")
                 } `}
               >
 
@@ -97,8 +97,8 @@ const Layout = ({ children }) => {
             <Link href='/breadcrumb'>
               <a
                 href='/breadcrumbs'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/breadcrumbs") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/breadcrumbs")
                 } `}
               >
 
@@ -109,8 +109,8 @@ const Layout = ({ children }) => {
             <Link href='/button'>
               <a
                 href='/button'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/button") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/button")
                 } `}
               >
 
@@ -120,8 +120,8 @@ const Layout = ({ children }) => {
             <Link href='/checkbox'>
               <a
                 href='/checkbox'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/checkbox") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/checkbox")
                 } `}
               >
 
@@ -131,8 +131,8 @@ const Layout = ({ children }) => {
             <Link href='/empty-state'>
               <a
                 href='/empty-state'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/empty-state") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/empty-state")
                 } `}
               >
 
@@ -142,8 +142,8 @@ const Layout = ({ children }) => {
 
             <Link href='/lozenge'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/lozenge") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/lozenge")
                 } `}
               >
 
@@ -153,18 +153,30 @@ const Layout = ({ children }) => {
 
             <Link href='/progress-bar'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/progress-bar") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/progress-bar")
                 } `}
               >
 
                 <span className='mx-3'>Progress bar</span>{" "}
               </a>
             </Link>
+
+            <Link href='/modal-dialog'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/modal-dialog")
+                } `}
+              >
+
+                <span className='mx-3'>Modal dialog</span>{" "}
+              </a>
+            </Link>
+
             <Link href='/progress-indicator'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/progress-indicator") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/progress-indicator")
                 } `}
               >
 
@@ -173,18 +185,28 @@ const Layout = ({ children }) => {
             </Link>
             <Link href='/range'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/range") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/range")
                 } `}
               >
 
                 <span className='mx-3'>Range</span>{" "}
               </a>
             </Link>
+            <Link href='/radio'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/radio")
+                } `}
+              >
+
+                <span className='mx-3'>Radio</span>{" "}
+              </a>
+            </Link>
             <Link href='/tag'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/tag") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/tag")
                 } `}
               >
 
@@ -193,8 +215,8 @@ const Layout = ({ children }) => {
             </Link>
             <Link href='/textarea'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/textarea") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/textarea")
                 } `}
               >
 
@@ -203,8 +225,8 @@ const Layout = ({ children }) => {
             </Link>
             <Link href='/textfield'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/textfield") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/textfield")
                 } `}
               >
 
@@ -213,8 +235,8 @@ const Layout = ({ children }) => {
             </Link>
             <Link href='/toggle'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/toggle") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/toggle")
                 } `}
               >
 
@@ -224,8 +246,8 @@ const Layout = ({ children }) => {
 
             <Link href='/tooltip'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-25  rounded ${
-                  getLocation("/tooltip") + " text-" + themeColor
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/tooltip")
                 } `}
               >
 

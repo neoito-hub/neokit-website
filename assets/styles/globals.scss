@@ -90,7 +90,7 @@ textarea {
   border: 2px solid #dfe1e6;
 }
 
-textarea, 
+textarea,
 input {
   &:focus {
     border: 2px solid #4c9aff;
@@ -118,4 +118,73 @@ input {
     border-radius: 10px;
     background-color: #d1d5db;
   }
+}
+
+.menu-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 998;
+  transition: all 0.5s;
+}
+.open-menu-overlay {
+}
+
+.modal-wrapper {
+  transition: 0.5s;
+  z-index: 999999;
+  height: max-content;
+}
+
+.modal {
+}
+.modal-translation {
+  transition-duration: 350ms;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.15, 1, 0.3, 1);
+  transform: none;
+}
+.modal-overflow {
+  max-height: calc(100vh - 48px);
+  // max-width:calc(100vw - 48px);
+  min-width: 300px;
+  min-height: 300px;
+}
+
+// radio button
+
+.container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.checkmark {
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
 }
