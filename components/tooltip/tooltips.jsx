@@ -39,7 +39,7 @@ const Tooltips = ({
           onMouseLeave={closeTooltip}
           className={
             (tooltipShow ? "" : "hidden ") +
-            " cursor-default border-0 mb-3 block z-50 font-medium leading-normal text-xs max-w-xs text-left no-underline break-words rounded  "
+            " cursor-default border-0 mb-3 block z-50 font-medium leading-normal text-xs w-max max-w-xs text-left no-underline break-words rounded  "
           }
           ref={tooltipRef}
         >

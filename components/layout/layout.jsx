@@ -67,7 +67,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Avatar</span>{" "}
+                <span className='mx-3'>Avatar</span>
               </a>
             </Link>
 
@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Badge</span>{" "}
+                <span className='mx-3'>Badge</span>
               </a>
             </Link>
             <Link href='/banner'>
@@ -90,7 +90,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Banner</span>{" "}
+                <span className='mx-3'>Banner</span>
               </a>
             </Link>
 
@@ -147,7 +147,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'> Lozenge </span>{" "}
+                <span className='mx-3'> Lozenge </span>
               </a>
             </Link>
 
@@ -158,7 +158,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Progress bar</span>{" "}
+                <span className='mx-3'>Progress bar</span>
               </a>
             </Link>
 
@@ -169,7 +169,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Modal dialog</span>{" "}
+                <span className='mx-3'>Modal dialog</span>
               </a>
             </Link>
 
@@ -180,7 +180,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Progress indicator</span>{" "}
+                <span className='mx-3'>Progress indicator</span>
               </a>
             </Link>
             <Link href='/range'>
@@ -190,7 +190,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Range</span>{" "}
+                <span className='mx-3'>Range</span>
               </a>
             </Link>
             <Link href='/radio'>
@@ -200,7 +200,17 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Radio</span>{" "}
+                <span className='mx-3'>Radio</span>
+              </a>
+            </Link>
+            <Link href='/tabs'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
+                  getLocation("/tabs")
+                } `}
+              >
+
+                <span className='mx-3'>Tabs</span>
               </a>
             </Link>
             <Link href='/tag'>
@@ -210,7 +220,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Tag</span>{" "}
+                <span className='mx-3'>Tag</span>
               </a>
             </Link>
             <Link href='/textarea'>
@@ -220,7 +230,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Text area</span>{" "}
+                <span className='mx-3'>Text area</span>
               </a>
             </Link>
             <Link href='/textfield'>
@@ -230,7 +240,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Text field</span>{" "}
+                <span className='mx-3'>Text field</span>
               </a>
             </Link>
             <Link href='/toggle'>
@@ -240,7 +250,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Toggle</span>{" "}
+                <span className='mx-3'>Toggle</span>
               </a>
             </Link>
 
@@ -251,7 +261,7 @@ const Layout = ({ children }) => {
                 } `}
               >
 
-                <span className='mx-3'>Tooltip</span>{" "}
+                <span className='mx-3'>Tooltip</span>
               </a>
             </Link>
           </nav>
@@ -336,7 +346,7 @@ const Layout = ({ children }) => {
                     >
                       <span className='w-5 h-5 rounded-full bg-purple-600 mr-2 border-2 border-white'>
         
-                      </span>{" "}
+                      </span>
                       Purple
                     </li>
                     <li
