@@ -45,7 +45,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .layout-height {
-  max-height: calc(100vh - 108px);
+  max-height: calc(100vh - 90px);
 }
 
 // button
@@ -84,10 +84,11 @@ body {
 // input:checked + svg {
 // 	display: block;
 // }
-textarea {
+textarea,
+input {
   max-width: calc(100% - 10px);
   // max-height:20vh;
-  border: 2px solid #dfe1e6;
+  border: 5px solid #dfe1e6;
 }
 
 textarea,
@@ -157,7 +158,6 @@ input {
   -ms-user-select: none;
   user-select: none;
 }
-
 
 .checkmark {
   background-color: #eee;

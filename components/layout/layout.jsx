@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
   const getLocation = (currentLocation) => {
     return currentLocation.includes(router.pathname)
       ? "text-white hover:text-opacity-100 bg-" + themeColor
-      : " hover:text-opacity-75 text-"+themeColor;
+      : " hover:text-opacity-75 text-" + themeColor;
   };
 
   return (
@@ -62,11 +62,10 @@ const Layout = ({ children }) => {
           <nav className='mt-10 px-5 side-nav overflow-y-hidden hover:overflow-y-auto custom-scroll-bar pb-10 '>
             <Link href='/avatar'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/avatar")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/avatar"
+                )} `}
               >
-
                 <span className='mx-3'>Avatar</span>
               </a>
             </Link>
@@ -74,22 +73,20 @@ const Layout = ({ children }) => {
             <Link href='/badge'>
               <a
                 href='/badge'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/badge")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/badge"
+                )} `}
               >
-
                 <span className='mx-3'>Badge</span>
               </a>
             </Link>
             <Link href='/banner'>
               <a
                 href='/banner'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50 hover:text-opacity-75  rounded ${
-                  getLocation("/banner")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50 hover:text-opacity-75  rounded ${getLocation(
+                  "/banner"
+                )} `}
               >
-
                 <span className='mx-3'>Banner</span>
               </a>
             </Link>
@@ -97,11 +94,10 @@ const Layout = ({ children }) => {
             <Link href='/breadcrumb'>
               <a
                 href='/breadcrumbs'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/breadcrumbs")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/breadcrumbs"
+                )} `}
               >
-
                 <span className='mx-3'>Breadcrumbs</span>
               </a>
             </Link>
@@ -109,158 +105,162 @@ const Layout = ({ children }) => {
             <Link href='/button'>
               <a
                 href='/button'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/button")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/button"
+                )} `}
               >
-
                 <span className='mx-3'>Button</span>
               </a>
             </Link>
             <Link href='/checkbox'>
               <a
                 href='/checkbox'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/checkbox")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/checkbox"
+                )} `}
               >
-
                 <span className='mx-3'>Checkbox</span>
               </a>
             </Link>
+
             <Link href='/empty-state'>
               <a
                 href='/empty-state'
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/empty-state")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/empty-state"
+                )} `}
               >
-
                 <span className='mx-3'>Empty-state</span>
               </a>
             </Link>
 
             <Link href='/lozenge'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/lozenge")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/lozenge"
+                )} `}
               >
-
                 <span className='mx-3'> Lozenge </span>
               </a>
             </Link>
 
             <Link href='/progress-bar'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/progress-bar")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/progress-bar"
+                )} `}
               >
-
                 <span className='mx-3'>Progress bar</span>
               </a>
             </Link>
 
             <Link href='/modal-dialog'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/modal-dialog")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/modal-dialog"
+                )} `}
               >
-
                 <span className='mx-3'>Modal dialog</span>
               </a>
             </Link>
 
             <Link href='/progress-indicator'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/progress-indicator")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/progress-indicator"
+                )} `}
               >
-
                 <span className='mx-3'>Progress indicator</span>
               </a>
             </Link>
             <Link href='/range'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/range")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/range"
+                )} `}
               >
-
                 <span className='mx-3'>Range</span>
               </a>
             </Link>
             <Link href='/radio'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/radio")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/radio"
+                )} `}
               >
-
                 <span className='mx-3'>Radio</span>
+              </a>
+            </Link>
+            <Link href='/section-message'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/section-message"
+                )} `}
+              >
+                <span className='mx-3'>Section message</span>
+              </a>
+            </Link>
+            <Link href='/select'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/select"
+                )} `}
+              >
+                <span className='mx-3'>Select</span>
               </a>
             </Link>
             <Link href='/tabs'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/tabs")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/tabs"
+                )} `}
               >
-
                 <span className='mx-3'>Tabs</span>
               </a>
             </Link>
             <Link href='/tag'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/tag")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/tag"
+                )} `}
               >
-
                 <span className='mx-3'>Tag</span>
               </a>
             </Link>
             <Link href='/textarea'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/textarea")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/textarea"
+                )} `}
               >
-
                 <span className='mx-3'>Text area</span>
               </a>
             </Link>
             <Link href='/textfield'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/textfield")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/textfield"
+                )} `}
               >
-
                 <span className='mx-3'>Text field</span>
               </a>
             </Link>
             <Link href='/toggle'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/toggle")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/toggle"
+                )} `}
               >
-
                 <span className='mx-3'>Toggle</span>
               </a>
             </Link>
 
             <Link href='/tooltip'>
               <a
-                className={`flex items-center mt-4 py-2 px-6  bg-opacity-50  rounded ${
-                  getLocation("/tooltip")
-                } `}
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/tooltip"
+                )} `}
               >
-
                 <span className='mx-3'>Tooltip</span>
               </a>
             </Link>
@@ -344,9 +344,7 @@ const Layout = ({ children }) => {
                       }}
                       className='flex items-center px-4 py-3 text-gray-600 hover:text-white hover:bg-indigo-600 -mx-2 cursor-pointer'
                     >
-                      <span className='w-5 h-5 rounded-full bg-purple-600 mr-2 border-2 border-white'>
-        
-                      </span>
+                      <span className='w-5 h-5 rounded-full bg-purple-600 mr-2 border-2 border-white'></span>
                       Purple
                     </li>
                     <li
@@ -356,9 +354,7 @@ const Layout = ({ children }) => {
                       }}
                       className='flex items-center px-4 py-3 text-gray-600 hover:text-white hover:bg-indigo-600 -mx-2 cursor-pointer'
                     >
-                      <span className='w-5 h-5 rounded-full  bg-green-600 mr-2 border-2 border-white'>
-        
-                      </span>
+                      <span className='w-5 h-5 rounded-full  bg-green-600 mr-2 border-2 border-white'></span>
                       Green
                     </li>
                     <li
@@ -368,9 +364,7 @@ const Layout = ({ children }) => {
                       }}
                       className='flex items-center px-4 py-3 text-gray-600 hover:text-white hover:bg-indigo-600 -mx-2 cursor-pointer'
                     >
-                      <span className='w-5 h-5 rounded-full bg-pink-600 mr-2 border-2 border-white'>
-        
-                      </span>
+                      <span className='w-5 h-5 rounded-full bg-pink-600 mr-2 border-2 border-white'></span>
                       Pink
                     </li>
                     <li
@@ -380,9 +374,7 @@ const Layout = ({ children }) => {
                       }}
                       className='flex items-center px-4 py-3 text-gray-600 hover:text-white hover:bg-indigo-600 -mx-2 cursor-pointer'
                     >
-                      <span className='w-5 h-5 rounded-full bg-indigo-600 mr-2 border-2 border-white'>
-        
-                      </span>
+                      <span className='w-5 h-5 rounded-full bg-indigo-600 mr-2 border-2 border-white'></span>
                       Indigo
                     </li>
                   </ul>
@@ -443,7 +435,6 @@ const Layout = ({ children }) => {
           <main className='flex-1  bg-gray-200 '>
             <div className=' layout-height overflow-x-hidden overflow-y-auto'>
               <div className='bg-white shodow rounded h-auto p-8 m-6 '>
-
                 {children}
               </div>
             </div>

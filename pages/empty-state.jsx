@@ -148,7 +148,7 @@ const EmptyStateExample = () => {
     export default EmptyStateImageDimensionsExample;
     `;
 
-    const emptyStateNarrowExample = `
+  const emptyStateNarrowExample = `
     import React, { useState } from "react";
     import { EmptyState } from '@neoKit/emptyState';
 
@@ -168,7 +168,7 @@ const EmptyStateExample = () => {
     };
     export default EmptyStateNarrow;
     `;
-    const emptyStateWideExample = `
+  const emptyStateWideExample = `
     import React, { useState } from "react";
     import { EmptyState } from '@neoKit/emptyState';
 
@@ -191,7 +191,10 @@ const EmptyStateExample = () => {
 
   return (
     <div className='flex flex-col  w-full flex-start'>
-      <PageData title='Empty state' />
+      <PageData
+        title='Empty state'
+        description='An empty state appears when there is no data to display and describes what the user can do next.'
+      />
       {/* Default */}
       <section>
         <PageData
