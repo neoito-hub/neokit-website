@@ -19,11 +19,21 @@ function ProgressBar() {
 
     import ProgressBar from '@neoKit/progress-bar';
 
-    const ProgressBarDefaultExample = () => {
+    const ProgressBarIntermediateExample = () => {
     return <ProgressBar isIndeterminate />;
     };
 
-    export default ProgressBarDefaultExample;`;
+    export default ProgressBarIntermediateExample;`;
+    const CustomprogressBar = `
+    import React from 'react';
+
+    import ProgressBar from '@neoKit/progress-bar';
+
+    const CustomProgressBarExample = () => {
+    return   <ProgressBars value='60' isAnimated></ProgressBars>;
+    };
+
+    export default  CustomProgressBarExample;`;
 
   return (
     <div className='flex flex-col  w-full flex-start'>
@@ -57,6 +67,20 @@ function ProgressBar() {
         </div>
         <div className='w-full pt-3'>
           <Snipet code={progressBarIntermediate} />
+        </div>
+      </section>
+
+       {/* Custom with animation */}
+       <section>
+        <PageData
+          subTitle='Animated Progress bar'
+          subDescription='Animated Progressbar have animated progress feilds'
+        />
+        <div className='py-2'>
+          <ProgressBars value='60' isAnimated></ProgressBars>
+        </div>
+        <div className='w-full pt-3'>
+          <Snipet code={CustomprogressBar} />
         </div>
       </section>
     </div>

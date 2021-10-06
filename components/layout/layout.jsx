@@ -123,6 +123,16 @@ const Layout = ({ children }) => {
               </a>
             </Link>
 
+            <Link href='/code'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/code"
+                )} `}
+              >
+                <span className='mx-3'>Code</span>
+              </a>
+            </Link>
+
             <Link href='/empty-state'>
               <a
                 href='/empty-state'
@@ -207,6 +217,15 @@ const Layout = ({ children }) => {
                 )} `}
               >
                 <span className='mx-3'>Select</span>
+              </a>
+            </Link>
+            <Link href='/spinner'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/spinner"
+                )} `}
+              >
+                <span className='mx-3'>Spinner</span>
               </a>
             </Link>
             <Link href='/tabs'>

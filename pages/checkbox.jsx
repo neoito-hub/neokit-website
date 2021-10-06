@@ -147,7 +147,6 @@ const CheckboxSizesExample = () => {
         title='Checkbox'
         description='A checkbox is an input control that allows a user to select one or more options from a number of choices.'
       />
-
       {/* Default */}
       <section>
         <PageData

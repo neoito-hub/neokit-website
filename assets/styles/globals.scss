@@ -188,3 +188,246 @@ input {
   border-radius: 50%;
   background: white;
 }
+
+
+.notification-container {
+	font-size: 14px;
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 999999
+}
+
+.top-right {
+	top: 12px;
+	right: 12px;
+	transition: transform .6s ease-in-out;
+	animation: toast-in-right .7s;
+}
+
+.bottom-right {
+	bottom: 12px;
+	right: 12px;
+	transition: transform .6s ease-in-out;
+	animation: toast-in-right .7s;
+}
+
+.top-left {
+	top: 12px;
+	left: 12px;
+	transition: transform .6s ease-in;
+	animation: toast-in-left .7s;
+}
+
+.bottom-left {
+	bottom: 12px;
+	left: 12px;
+	transition: transform .6s ease-in;
+	animation: toast-in-left .7s;
+}
+
+.notification {
+	background: #fff;
+	transition: .3s ease;
+	position: relative;
+	pointer-events: auto;
+	overflow: hidden;
+	margin: 0 0 6px;
+	padding: 30px;
+	margin-bottom: 15px;
+	width: 300px;
+	max-height: 100px;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 0 10px #999;
+	color: #000;
+	opacity: .9;
+	background-position: 15px;
+	background-repeat: no-repeat;
+}
+
+.notification:hover {
+	box-shadow: 0 0 12px #fff;
+	opacity: 1;
+	cursor: pointer
+}
+
+.notification-title {
+	font-weight: 700;
+	font-size: 16px;
+	text-align: left;
+	margin-top: 0;
+	margin-bottom: 6px;
+    width: 300px;
+    height: 18px;
+}
+
+.notification-message {
+	margin: 0;
+	text-align: left;
+    height: 18px;
+    margin-left: -1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notification-image {
+    float: left;
+    margin-right: 15px;
+}
+
+.notification-image img {
+    width: 30px;
+    height: 30px;
+}
+
+.toast {
+    height: 50px;
+    width: 365px;
+	color: #fff;
+	padding: 20px 15px 10px 10px;
+}
+
+.notification-container button {
+	position: relative;
+	right: -.3em;
+	top: -.3em;
+	float: right;
+	font-weight: 700;
+	color: #fff;
+	outline: none;
+	border: none;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .8;
+	line-height: 1;
+	font-size: 16px;
+	padding: 0;
+	cursor: pointer;
+	background: 0 0;
+	border: 0
+}
+
+@keyframes toast-in-right {
+	from {
+	  transform: translateX(100%);
+	  
+	}
+	to {
+	  transform: translateX(0);
+	}
+}
+
+@keyframes toast-in-left {
+	from {
+		transform: translateX(-100%);
+		
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+//progress bar style starts
+.progress-bar-wrapper {
+  .meter {
+    background: #2db6f5;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+  }
+  .meter > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: transparent;
+    background-image: linear-gradient(
+      center bottom,
+      rgb(255, 255, 255) 37%,
+      rgb(255, 255, 255) 69%
+    );
+    // box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    //   inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  .meter > span:after,
+  .animate > span > span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+      -57deg,
+      rgb(125, 213, 252) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgb(125, 213, 252) 50%,
+      rgb(125, 213, 252) 75%,
+      transparent 75%,
+      transparent
+    );
+    z-index: 1;
+    background-size: 15px 20px;
+    animation: move 5s linear infinite;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+  }
+
+  .animate > span:after {
+    display: none;
+  }
+
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+
+  .nostripes > span > span,
+  .nostripes > span::after {
+    background-image: none;
+  }
+}
+
+//spinner
+
+.spinner {
+  animation: rotate 2s linear infinite;
+ 
+  
+  & .path {
+    stroke: #42526e;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+  
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

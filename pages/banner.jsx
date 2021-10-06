@@ -4,10 +4,8 @@ import PageData from "../components/page-data/page-data";
 import Snipet from "../components/snippet/snipet";
 
 function Banner() {
-  const [bannerWarnning, SetBannerWarnning] =
-    useState
-    (`import React from 'react';
-    import Banners from '@neoKit/avatar';
+  const bannerWarnning = `import React from 'react';
+    import Banners from '@neoKit/banner';
 
             const Banners = () => {
             return (
@@ -16,11 +14,9 @@ function Banner() {
             )
     };
     export default Banners;
-    `);
+    `;
 
-    const [bannerError, SetBannerError] =
-    useState
-    (`import React from 'react';
+  const bannerError = `import React from 'react';
     import Banners from '@neoKit/banner';
 
             const Banners = () => {
@@ -30,11 +26,9 @@ function Banner() {
             )
     };
     export default Banners;
-    `);
+    `;
 
-    const [bannerAnnouncement, SetBannerAnnouncement] =
-    useState
-    (`import React from 'react';
+  const bannerAnnouncement = `import React from 'react';
 
     import Banners from '@neoKit/banner';
     
@@ -50,11 +44,9 @@ function Banner() {
     };
     
     export default BannerAnnouncementExample;
-    `);
+    `;
 
-    const [bannerOverflow, SetBannerOverflow] =
-    useState
-    (`import React from 'react';
+  const bannerOverflow = `import React from 'react';
 
     import WarningIcon from '@neoKit/icon/glyph/warning';
     
@@ -74,8 +66,7 @@ function Banner() {
     };
     
     export default BannerOverflowExample;
-    `);
-
+    `;
 
   return (
     <div className='flex flex-col  w-full flex-start'>
@@ -90,55 +81,52 @@ function Banner() {
           subTitle='Warning'
           subDescription='The default form of a banner. Use warning banners when you want the user to take a specific action or to warn them that something is about to go wrong.'
         />
-        <div className="py-2">
-        <Banners
-          appearance='warning'
-          color='#253858'
-          icon={"assets/warning.svg"}
-        >
-          Warning goes here
-        </Banners>
-       </div>
+        <div className='py-2'>
+          <Banners
+            appearance='warning'
+            color='#253858'
+            icon={"assets/warning.svg"}
+          >
+            Warning goes here
+          </Banners>
+        </div>
         <div className='w-full pt-3'>
           <Snipet code={bannerWarnning} />
         </div>
       </section>
-           {/* Error */}
-           <section>
+      {/* Error */}
+      <section>
         <PageData
           subTitle='Error          '
           subDescription='Use error banners to inform users something critical has happened and requires immediate attention.'
         />
-        <div className="py-2">
-        <Banners
-          appearance='error'
-          color='#ffff'
-          icon={"assets/error.svg"}
-        >
-          Error message goes here
-        </Banners>
-       </div>
+        <div className='py-2'>
+          <Banners appearance='error' color='#ffff' icon={"assets/error.svg"}>
+            Error message goes here
+          </Banners>
+        </div>
         <div className='w-full pt-3'>
           <Snipet code={bannerError} />
         </div>
       </section>
 
-{/* Announcement */}
-<section>
+      {/* Announcement */}
+      <section>
         <PageData
           subTitle='Announcement '
           subDescription='Announcement banners are used by admins who want to make a general announcement about the product. These banners do not contain an icon. Lengthy text will overflow, allowing users to scroll to see the rest of the content.'
         />
-        <div className="py-2">
-        <Banners
-          appearance='announcement'
-          color='#ffff'
-        >
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo impedit labore nesciunt in, harum fugit odio ipsum tempora vel ut debitis nam rerum maiores quam minus corporis recusandae, dolore consectetur!
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo impedit labore nesciunt in, harum fugit odio ipsum tempora vel ut debitis nam rerum maiores quam minus corporis recusandae, dolore consectetur!
-       
-        </Banners>
-       </div>
+        <div className='py-2'>
+          <Banners appearance='announcement' color='#ffff'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo impedit
+            labore nesciunt in, harum fugit odio ipsum tempora vel ut debitis
+            nam rerum maiores quam minus corporis recusandae, dolore
+            consectetur! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quo impedit labore nesciunt in, harum fugit odio ipsum tempora
+            vel ut debitis nam rerum maiores quam minus corporis recusandae,
+            dolore consectetur!
+          </Banners>
+        </div>
         <div className='w-full pt-3'>
           <Snipet code={bannerError} />
         </div>
@@ -150,20 +138,22 @@ function Banner() {
           subTitle='Truncation '
           subDescription='Banner size can change based on the size of the browser. For warning and error banners, lengthy text will be truncated with an ellipses.'
         />
-        <div className="py-2" style={{ maxWidth: 400, margin: 'auto' }}>
-        <Banners
-          appearance='warning'
-          color='#253858'
-          icon={"assets/warning.svg"}
-        >
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus expedita, maiores neque dolore nulla, adipisci possimus autem ipsa soluta tenetur qui! Magnam est reprehenderit eius facere esse iure perferendis.
-        </Banners>
-       </div>
+        <div className='py-2' style={{ maxWidth: 400, margin: "auto" }}>
+          <Banners
+            appearance='warning'
+            color='#253858'
+            icon={"assets/warning.svg"}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+            repellendus expedita, maiores neque dolore nulla, adipisci possimus
+            autem ipsa soluta tenetur qui! Magnam est reprehenderit eius facere
+            esse iure perferendis.
+          </Banners>
+        </div>
         <div className='w-full pt-3'>
           <Snipet code={bannerOverflow} />
         </div>
       </section>
-
     </div>
   );
 }
