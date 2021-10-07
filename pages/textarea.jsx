@@ -116,7 +116,6 @@ export textareaDefault () => (
                         `;
 
   const [values, setValues] = useState("Add a message here");
-  console.log(values);
   return (
     <div>
       <PageData

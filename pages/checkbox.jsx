@@ -138,9 +138,6 @@ const CheckboxSizesExample = () => {
   const [isChecked, setIsChecked] = useState(true);
   const [isdefaultChecked, setIsDefaultChecked] = useState(false);
   const [isUnControlChecked, setIsUnControlChecked] = useState(true);
-  console.log(isdefaultChecked, "fe");
-  console.log(isChecked, "se");
-  console.log(isUnControlChecked, "third");
   return (
     <div className='flex flex-col  w-full flex-start'>
       <PageData

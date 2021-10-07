@@ -48,12 +48,9 @@ function Checkboxes({
     }
   };
   const handleChange = () => {
-    console.log("enter");
     if (control) {
-      console.log("enter ds");
       onChange(!checked);
     } else {
-      console.log("enter");
       setVal(!val);
       onChange(!val);
     }
@@ -67,7 +64,7 @@ function Checkboxes({
         }`}
       >
         <input
-        className={`${checkboxSize  }`}
+          className={`${checkboxSize}`}
           type='checkbox'
           checked={checked && !defaultChecked ? checked : val}
           id={id}
@@ -75,7 +72,20 @@ function Checkboxes({
           disabled={isDisabled}
           onChange={() => handleChange()}
         />
-        <span className={`${size === 'small' ? ' text-xs ' : size === 'large' ? ' text-base ' : size === 'xlarge' ? ' text-lg ': 'text-sm'}`}> {label}</span>
+        <span
+          className={`${
+            size === "small"
+              ? " text-xs "
+              : size === "large"
+              ? " text-base "
+              : size === "xlarge"
+              ? " text-lg "
+              : "text-sm"
+          }`}
+        >
+          {" "}
+          {label}
+        </span>
       </label>
     </div>
   );

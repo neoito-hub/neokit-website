@@ -10,7 +10,6 @@ const Modal = ({ modal, children, onchange  , styles , appearance , ...props }) 
     } else {
       openModal ? "" : setIsOpen(false);
     }
-    console.log(openModal, modal);
   }, [modal]);
 
   //   if (modal) {

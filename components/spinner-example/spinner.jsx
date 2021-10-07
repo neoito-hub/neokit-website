@@ -1,7 +1,6 @@
 import React from "react";
 
 const Spinner = ({ size, appearance }) => {
-  console.log(size);
   return (
     <div>
       {appearance?.trim() === "loader" ? (

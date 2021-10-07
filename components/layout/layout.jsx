@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Router from 'next/router'
 
 const Layout = ({ children }) => {
-  // onClick ={setProfile(false)}
   const router = useRouter();
-  console.log(router);
+  useEffect(() => {
+   if(router.asPath === '/'){
+       Router.push('/avatar')
+   }
+  }, [Router]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [profileView, setProfileView] = useState(false);
   const [theme, setTheme] = useState(false);
@@ -60,6 +64,15 @@ const Layout = ({ children }) => {
             </span>
           </div>
           <nav className='mt-10 px-5 side-nav overflow-y-hidden hover:overflow-y-auto custom-scroll-bar pb-10 '>
+          <Link href='/accordion'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/accordion"
+                )} `}
+              >
+                <span className='mx-3'>Accordion</span>
+              </a>
+            </Link>
             <Link href='/avatar'>
               <a
                 className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(

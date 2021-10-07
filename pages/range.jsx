@@ -47,7 +47,7 @@ const RangeControlledExample = () => {
           step={1}
           min={1}
           max={100}
-          onChange={(value) => console.log("new-value" , value)}
+          onChange={(value) => {}}
         ></Ranges>
           </>
   
@@ -131,7 +131,7 @@ const RangeControlledExample = () => {
             step={1}
             min={1}
             max={100}
-            onChange={(value) => console.log("new-value", value)}
+            onChange={(value) => {}}
           ></Ranges>
         </div>
         <div className='w-full pt-3'>

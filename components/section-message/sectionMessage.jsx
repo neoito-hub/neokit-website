@@ -1,7 +1,6 @@
 import React from "react";
 
 const SectionMessage = ({ title, appearance, actions, children, ...props }) => {
-  console.log(actions);
   return (
     <>
       <div

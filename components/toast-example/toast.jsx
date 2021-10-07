@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 
-const Toast = ({props, toastList, position, autoDelete, dismissTime } )=> {
-    console.log(props);
-   
+const Toast = ({props, toastList, position, autoDelete, dismissTime } )=> {   
     const [list, setList] = useState(toastList);
 
     useEffect(() => {

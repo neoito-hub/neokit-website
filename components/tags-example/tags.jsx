@@ -30,7 +30,6 @@ function Tags({
     } else {
       setTagColor("black");
     }
-    console.log(tagsColors);
   };
   const getColor = () => {
     if (color) {

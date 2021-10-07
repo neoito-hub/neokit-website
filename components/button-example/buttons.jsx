@@ -20,7 +20,6 @@ function Buttons({
   useEffect(() => {
     getProps();
     getAttributes();
-    console.log(isSelected);
   }, []);
   const getProps = () => {
     if (appearance === "default" || !appearance) {

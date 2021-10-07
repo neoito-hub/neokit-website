@@ -9,7 +9,6 @@ const ToastExample = () => {
 
   const showToast = (type) => {
     const id = Math.floor((Math.random() * 101) + 1)
-    console.log(type);;
     switch(type) {
       
       case 'success':
@@ -54,7 +53,6 @@ const ToastExample = () => {
     }
     
     setList([...list, toastProperties]);
-    console.log(list);
   }
 
   return (

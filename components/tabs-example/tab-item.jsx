@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Tooltips from "../tooltip/tooltips";
 
-const Tab = ({ children, openTab, index, setOpenTab, head, tooltip }) => {
+const TabItem = ({ children, openTab, index, setOpenTab, head, tooltip }) => {
   const color = "pink";
   return (
     <>
@@ -42,4 +42,4 @@ const Tab = ({ children, openTab, index, setOpenTab, head, tooltip }) => {
   );
 };
 
-export default Tab;
+export default TabItem;

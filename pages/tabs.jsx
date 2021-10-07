@@ -1,9 +1,8 @@
 import React from "react";
-import Tabs from "../components/tabs-example/tabs";
 import PageData from "../components/page-data/page-data";
 import Snipet from "../components/snippet/snipet";
-import TabList from "../components/tabs-example/tabList";
-import Tab from "../components/tabs-example/tab";
+import TabItem from "../components/tabs-example/tab-item";
+import Tabs from "../components/tabs-example/tabs";
 
 const TabsExample = () => {
   const defaultTab = `  
@@ -11,31 +10,31 @@ const TabsExample = () => {
     import tabs{ TabList ,Tab } from '@neoKit/tabs';
     const TabExample = () => {
         return (
-          <Tabs>
-            <TabList>
-              <Tab head='tab 1'>
+          
+            <Tabs>
+              <TabItem head='tab 1'>
                 <div>
                   <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                     Tab 1
                   </h2>
                 </div>
-              </Tab>
-              <Tab head='tab 2'>
+              </TabItem>
+              <TabItem head='tab 2'>
                 <div>
                   <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                     Tab 2
                   </h2>
                 </div>
-              </Tab>
-              <Tab head='tab 3'>
+              </TabItem>
+              <TabItem head='tab 3'>
                 <div>
                   <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                     Tab 3
                   </h2>
                 </div>
-              </Tab>
-            </TabList>
-          </Tabs>
+              </TabItem>
+            </Tabs>
+         
         );
       };
       
@@ -46,31 +45,31 @@ const TabsExample = () => {
       import tabs{ TabList ,Tab } from '@neoKit/tabs';
       const FadeInTabExample = () => {
           return (
-            <Tabs>
-              <TabList appearance='fade-in-down'>
-                <Tab head='tab 1'>
+            
+              <Tabs appearance='fade-in-down'>
+                <TabItem head='tab 1'>
                   <div>
                     <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                       Tab 1
                     </h2>
                   </div>
-                </Tab>
-                <Tab head='tab 2'>
+                </TabItem>
+                <TabItem head='tab 2'>
                   <div>
                     <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                       Tab 2
                     </h2>
                   </div>
-                </Tab>
-                <Tab head='tab 3'>
+                </TabItem>
+                <TabItem head='tab 3'>
                   <div>
                     <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                       Tab 3
                     </h2>
                   </div>
-                </Tab>
-              </TabList>
-            </Tabs>
+                </TabItem>
+              </Tabs>
+           
           );
         };
         
@@ -80,31 +79,31 @@ const TabsExample = () => {
         import tabs{ TabList ,Tab } from '@neoKit/tabs';
         const FadeDownTabExample = () => {
             return (
-              <Tabs>
-              <TabList appearance='fade-out-down'>
-                  <Tab head='tab 1'>
+              
+              <Tabs appearance='fade-out-down'>
+                  <TabItem head='tab 1'>
                     <div>
                       <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                         Tab 1
                       </h2>
                     </div>
-                  </Tab>
-                  <Tab head='tab 2'>
+                  </TabItem>
+                  <TabItem head='tab 2'>
                     <div>
                       <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                         Tab 2
                       </h2>
                     </div>
-                  </Tab>
-                  <Tab head='tab 3'>
+                  </TabItem>
+                  <TabItem head='tab 3'>
                     <div>
                       <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                         Tab 3
                       </h2>
                     </div>
-                  </Tab>
-                </TabList>
-              </Tabs>
+                  </TabItem>
+                </Tabs>
+             
             );
           };
           
@@ -114,31 +113,31 @@ const TabsExample = () => {
           import tabs{ TabList ,Tab } from '@neoKit/tabs';
           const FadeInUpTabExample = () => {
               return (
-                <Tabs>
-                <TabList appearance='fade-in-up'>
-                    <Tab head='tab 1'>
+                
+                <Tabs appearance='fade-in-up'>
+                    <TabItem head='tab 1'>
                       <div>
                         <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                           Tab 1
                         </h2>
                       </div>
-                    </Tab>
-                    <Tab head='tab 2'>
+                    </TabItem>
+                    <TabItem head='tab 2'>
                       <div>
                         <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                           Tab 2
                         </h2>
                       </div>
-                    </Tab>
-                    <Tab head='tab 3'>
+                    </TabItem>
+                    <TabItem head='tab 3'>
                       <div>
                         <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                           Tab 3
                         </h2>
                       </div>
-                    </Tab>
-                  </TabList>
-                </Tabs>
+                    </TabItem>
+                  </Tabs>
+               
               );
             };
             
@@ -149,106 +148,63 @@ const TabsExample = () => {
           import tabs{ TabList ,Tab } from '@neoKit/tabs';
           const FadeOutUpTabExample = () => {
               return (
-                <Tabs>
-                <TabList appearance='fade-out-up'>
-                    <Tab head='tab 1'>
+                
+                <Tabs appearance='fade-out-up'>
+                    <TabItem head='tab 1'>
                       <div>
                         <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                           Tab 1
                         </h2>
                       </div>
-                    </Tab>
-                    <Tab head='tab 2'>
+                    </TabItem>
+                    <TabItem head='tab 2'>
                       <div>
                         <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                           Tab 2
                         </h2>
                       </div>
-                    </Tab>
-                    <Tab head='tab 3'>
+                    </TabItem>
+                    <TabItem head='tab 3'>
                       <div>
                         <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                           Tab 3
                         </h2>
                       </div>
-                    </Tab>
-                  </TabList>
-                </Tabs>
+                    </TabItem>
+                  </Tabs>
+               
               );
             };
             
             export default FadeOutUpTabExample;`;
-      //       <TabList appearance='fade-out-up'>
-      //       <Tab head='tab 1' tooltip='Tooltip for tab 1'>
-      //         <div>
-      //           <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-      //             {" "}
-      //             Tab 1
-      //           </h2>
-      //           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-      //           dolore asperiores fugiat, optio, veritatis pariatur sapiente
-      //           nesciunt consequatur, libero aspernatur ipsa assumenda
-      //           ducimus. Illum esse aliquam iste nobis repudiandae facere.
-      //         </div>
-      //       </Tab>
-      //       <Tab head='tab 2' tooltip='Tooltip for tab 2'>
-      //         <div>
-      //           <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-      //             {" "}
-      //             Tab 2
-      //           </h2>
-      //           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-      //           dolore asperiores fugiat, optio, veritatis pariatur sapiente
-      //           nesciunt consequatur, libero aspernatur ipsa assumenda
-      //           ducimus. Illum esse aliquam iste nobis repudiandae facere.
-      //         </div>
-      //       </Tab>
-      //       <Tab head='tab 3' tooltip='Tooltip for tab 3'>
-      //         <div>
-      //           <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-      //             {" "}
-      //             Tab 3
-      //           </h2>
-      //           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-      //           dolore asperiores fugiat, optio, veritatis pariatur sapiente
-      //           nesciunt consequatur, libero aspernatur ipsa assumenda
-      //           ducimus. Illum esse aliquam iste nobis repudiandae facere.
-      //         </div>{" "}
-      //       </Tab>
-      //     </TabList>
-      //   </Tabs>
-      // </div>
-      // <div className='w-full pt-3'>
-      //   <Snipet code={tooltipTab} />
-const tooltipTab =   
-`import React from 'react';
+  const tooltipTab = `import React from 'react';
 import tabs{ TabList ,Tab } from '@neoKit/tabs';
 const TooltipTabExample = () => {
     return (
-      <Tabs>
-        <TabList>
-          <Tab head='tab 1' tooltip='Tooltip for tab 1'>
+      
+        <Tabs>
+          <TabItem head='tab 1' tooltip='Tooltip for tab 1'>
             <div>
               <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                 Tab 1
               </h2>
             </div>
-          </Tab>
-          <Tab head='tab 2' tooltip='Tooltip for tab 2'>
+          </TabItem>
+          <TabItem head='tab 2' tooltip='Tooltip for tab 2'>
             <div>
               <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                 Tab 2
               </h2>
             </div>
-          </Tab>
-          <Tab head='tab 3' tooltip='Tooltip for tab 2'>
+          </TabItem>
+          <TabItem head='tab 3' tooltip='Tooltip for tab 2'>
             <div>
               <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
                 Tab 3
               </h2>
             </div>
-          </Tab>
-        </TabList>
+          </TabItem>
+        </Tabs>
       </Tabs>
     );
   };
@@ -269,46 +225,43 @@ const TooltipTabExample = () => {
           subDescription='The default form of tabs.'
         />
         <div className='py-2'>
-          {/* <Tabs></Tabs> */}
           <Tabs>
-            <TabList>
-              <Tab head='tab 1'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 1
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 2'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 2
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 3'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 3
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>{" "}
-              </Tab>
-            </TabList>
+            <TabItem head='tab 1'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 1
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 2'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 2
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 3'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 3
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>{" "}
+            </TabItem>
           </Tabs>
         </div>
         <div className='w-full pt-3'>
@@ -325,45 +278,44 @@ const TooltipTabExample = () => {
         />
         <div className='py-2'>
           {/* <Tabs></Tabs> */}
-          <Tabs>
-            <TabList appearance='fade-in-down'>
-              <Tab head='tab 1'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 1
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 2'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 2
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 3'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 3
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>{" "}
-              </Tab>
-            </TabList>
+
+          <Tabs appearance='fade-in-down'>
+            <TabItem head='tab 1'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 1
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 2'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 2
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 3'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 3
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>{" "}
+            </TabItem>
           </Tabs>
         </div>
         <div className='w-full pt-3'>
@@ -379,45 +331,44 @@ const TooltipTabExample = () => {
         />
         <div className='py-2'>
           {/* <Tabs></Tabs> */}
-          <Tabs>
-            <TabList appearance='fade-out-down'>
-              <Tab head='tab 1'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 1
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 2'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 2
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 3'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 3
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>{" "}
-              </Tab>
-            </TabList>
+
+          <Tabs appearance='fade-out-down'>
+            <TabItem head='tab 1'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 1
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 2'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 2
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 3'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 3
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>{" "}
+            </TabItem>
           </Tabs>
         </div>
         <div className='w-full pt-3'>
@@ -429,45 +380,45 @@ const TooltipTabExample = () => {
         <PageData subTitle='fade-in-up' subDescription='fade-in-up Animation' />
         <div className='py-2'>
           {/* <Tabs></Tabs> */}
-          <Tabs>
-            <TabList appearance='fade-in-up'>
-              <Tab head='tab 1'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 1
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 2'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 2
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 3'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 3
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>{" "}
-              </Tab>
-            </TabList>
+
+          <Tabs appearance='fade-in-up'>
+            <TabItem head='tab 1'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 1
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 2'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 2
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 3'>
+              /{" "}
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 3
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>{" "}
+            </TabItem>
           </Tabs>
         </div>
         <div className='w-full pt-3'>
@@ -482,45 +433,44 @@ const TooltipTabExample = () => {
         />
         <div className='py-2'>
           {/* <Tabs></Tabs> */}
-          <Tabs>
-            <TabList appearance='fade-out-up'>
-              <Tab head='tab 1'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 1
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 2'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 2
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 3'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 3
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>{" "}
-              </Tab>
-            </TabList>
+
+          <Tabs appearance='fade-out-up'>
+            <TabItem head='tab 1'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 1
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 2'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 2
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 3'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 3
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>{" "}
+            </TabItem>
           </Tabs>
         </div>
         <div className='w-full pt-3'>
@@ -535,45 +485,44 @@ const TooltipTabExample = () => {
         />
         <div className='py-2'>
           {/* <Tabs></Tabs> */}
-          <Tabs>
-            <TabList appearance='fade-out-up'>
-              <Tab head='tab 1' tooltip='Tooltip for tab 1'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 1
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 2' tooltip='Tooltip for tab 2'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 2
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>
-              </Tab>
-              <Tab head='tab 3' tooltip='Tooltip for tab 3'>
-                <div>
-                  <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
-                    {" "}
-                    Tab 3
-                  </h2>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-                  dolore asperiores fugiat, optio, veritatis pariatur sapiente
-                  nesciunt consequatur, libero aspernatur ipsa assumenda
-                  ducimus. Illum esse aliquam iste nobis repudiandae facere.
-                </div>{" "}
-              </Tab>
-            </TabList>
+
+          <Tabs appearance='fade-out-up'>
+            <TabItem head='tab 1' tooltip='Tooltip for tab 1'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 1
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 2' tooltip='Tooltip for tab 2'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 2
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>
+            </TabItem>
+            <TabItem head='tab 3' tooltip='Tooltip for tab 3'>
+              <div>
+                <h2 className='font-bold text-lg border-b border-blue-500 p2-3 mb-2'>
+                  {" "}
+                  Tab 3
+                </h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+                dolore asperiores fugiat, optio, veritatis pariatur sapiente
+                nesciunt consequatur, libero aspernatur ipsa assumenda ducimus.
+                Illum esse aliquam iste nobis repudiandae facere.
+              </div>{" "}
+            </TabItem>
           </Tabs>
         </div>
         <div className='w-full pt-3'>
