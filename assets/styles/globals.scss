@@ -88,7 +88,7 @@ textarea,
 input {
   max-width: calc(100% - 10px);
   // max-height:20vh;
-  border: 5px solid #dfe1e6;
+  border: 2px solid #dfe1e6;
 }
 
 textarea,
@@ -450,4 +450,27 @@ input {
 .accordion-content[aria-expanded="true"] {
   max-height: 0px;
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  display: block;
+  width: 100%;
+
+}
+.react-datepicker__close-icon{
+  right: 16px!important; 
+  &:focus{
+    outline: none;
+    border:1px solid transparent;
+  }
+  &:after{
+    font-size: 23px!important;
+    color:gray !important;
+    background-color:transparent !important;
+  }
+}
+.dropdown-container{
+  max-height: calc(100vh - 220px);
 }

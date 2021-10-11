@@ -145,6 +145,24 @@ const Layout = ({ children }) => {
                 <span className='mx-3'>Code</span>
               </a>
             </Link>
+            <Link href='/datetime-picker'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/datetime-picker"
+                )} `}
+              >
+                <span className='mx-3'>Date time picker</span>
+              </a>
+            </Link>
+            <Link href='/dropdown '>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/dropdown  "
+                )} `}
+              >
+                <span className='mx-3'>Dropdown menu</span>
+              </a>
+            </Link>
 
             <Link href='/empty-state'>
               <a
