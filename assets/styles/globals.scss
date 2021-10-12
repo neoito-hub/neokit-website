@@ -474,3 +474,14 @@ input {
 .dropdown-container{
   max-height: calc(100vh - 220px);
 }
+
+
+//bread crumb stylings
+.breadcrumb{
+  &:first-child{
+    .breadcrumb-item{
+      
+      display:none;
+    }
+  }
+}
