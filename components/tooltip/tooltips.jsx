@@ -23,7 +23,7 @@ const Tooltips = ({
   };
   return (
     <>
-      <div className='flex flex-wrap'>
+      <div className='flex flex-wrap tooltip-wraper'>
         <span
           className={
             " w-max outline-none focus:outline-none ease-linear transition-all duration-150"
@@ -44,7 +44,7 @@ const Tooltips = ({
           ref={tooltipRef}
         >
           <div
-            className='m-1 rounded'
+            className='m-1 rounded tooltip-data '
             style={{ backgroundColor: color ? color : "rgba(0, 0, 0, 0.8);" }}
           >
             {component ? (
@@ -52,7 +52,7 @@ const Tooltips = ({
             ) : (
               <div
                 className={
-                  (truncate ? " truncate " : " ") + " text-white p-1 px-2  "
+                  (truncate ? " truncate " : " ") + " text-white p-1 px-2  tooltip-content "
                 }
               >
                 {content}

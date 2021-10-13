@@ -18,18 +18,18 @@ const AccordionHeadding = ({
     <>
       <div
         className={
-          `flex justify-between  no-select accordion-title  bg-gray-200 p-3 rounded  gap-5 px-4 ` +
+          `flex justify-between  no-select accordion-title  bg-gray-200 p-3 rounded  gap-5 px-4 accordian-head ` +
           (isDisabled ? " pointer-events-none " : "")
          }
         onClick={() => activeAccordian(currentTab)}
       >
-        <p className=' text-base font-bold text-gray-500 whitespace-pre-wrap break-all'>
+        <p className=' text-base font-bold text-gray-500 whitespace-pre-wrap break-all accordian-title'>
           {children}
         </p>
-        <span className=''>
+        <span className=' accordian-icon'>
           <img
             src='assets/arrow-down.svg'
-            className={`h-full w-full max-w-max mt-0.5 transform transition duration-500 ease-in-out ${
+            className={`h-full w-full max-w-max mt-0.5 transform transition duration-500 ease-in-out  ${
               isOpened
                 ? show === currentTab
                   ? "rotate-0 "

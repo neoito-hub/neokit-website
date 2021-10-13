@@ -475,12 +475,14 @@ input {
   max-height: calc(100vh - 220px);
 }
 
+.dropdownList-wrapper{
+  transform: translate(0px, 58px)!important;
+}
 
 //bread crumb stylings
 .breadcrumb{
   &:first-child{
-    .breadcrumb-item{
-      
+    .breadcrumb-icon{   
       display:none;
     }
   }

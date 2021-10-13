@@ -44,13 +44,13 @@ function badges({ children, appearance, max }) {
   };
   return (
     <div
-      className={`flex flex-col px-10 ${
-        appearance === "primaryInverted" ? "w-full py-4 bg-blue-700  " : ""
+      className={`flex flex-col  badge-wrapper px-5  ${
+        appearance === "primaryInverted" ? "w-full py-4 bg-blue-700 " : " w-max "
       }`}
     >
       <div
         className={
-          "text-sm leading-none font-normal rounded-full px-2 py-1 w-max flex items-center justify-center " +
+          "text-sm leading-none font-normal rounded-full px-2 py-1 w-max flex items-center justify-center badge-body  " +
           badgeColor +
           badgeBGColor
         }

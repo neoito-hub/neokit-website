@@ -36,8 +36,8 @@ const AccordionItem = ({
    
   };
   return (
-    <div className=' w-full mx-auto my-px h-auto "'>
-      <div className={` flex flex-col w-full m-0  py-1 accordion ` +(isDisabled ? " cursor-not-allowed opacity-70 " : " cursor-pointer ")}>
+    <div className=' w-full mx-auto my-px h-auto accordian-item'>
+      <div className={` flex flex-col w-full m-0  py-1 accordion accordian-item-list ` +(isDisabled ? " cursor-not-allowed opacity-70 " : " cursor-pointer ")}>
         {child.props.children.map((child, index) =>
           React.cloneElement(child, {
             child,

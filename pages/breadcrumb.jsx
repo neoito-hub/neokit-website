@@ -75,7 +75,7 @@ function Breadcrumb() {
           subDescription="The maximum number of items in a breadcrumb can be customized. When there are more than the maximum number, the breadcrumb auto-collapses."
         />
         <div className="py-2">
-          <Breadcrumbs maxItems={4}>
+          <Breadcrumbs maxItems={5}>
             <BreadcrumbsItem href="/item" text="Item 1"></BreadcrumbsItem>
             <BreadcrumbsItem href="/item" text="Item 2"></BreadcrumbsItem>
             <BreadcrumbsItem href="/item" text="Item 3"></BreadcrumbsItem>

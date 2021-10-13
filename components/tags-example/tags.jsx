@@ -47,27 +47,27 @@ function Tags({
   };
 
   return (
-    <div>
+   <div className="tags-wraper">
       {tagsRemove && (
         <div
           class={
-            `text-sm font-medium inline-flex items-center justify-center py-1 px-2  rounded  text-gray-600 bg-gray-100  focus:outline-none  ${
+            `text-sm font-medium inline-flex items-center justify-center py-2 px-2  rounded  text-gray-600 bg-gray-100  focus:outline-none tags-container  ${
               removable
-                ? "hover:text-red-400 pointer-events-none hover:bg-red-100 "
+                ? "hover:text-red-400 pointer-events-none hover:bg-red-100 tags-removed "
                 : " hover:bg-gray-200 "
             } , ${
-              removable && href ? "hover:text-gray-500 pointer-events-auto" : ""
-            } ${rounded ? " rounded-3xl" : "rounded-sm"} ` + tagsState
+              removable && href ? "hover:text-gray-500 pointer-events-auto removed-link " : ""
+            } ${rounded ? " rounded-3xl tags-rounded " : "rounded-sm"} ` + tagsState
           }
           style={getColor()}
         >
           <a
             href={href}
-            className={` flex items-center justify-center gap-1  ${
-              href ? "hover:underline text-blue-500 " : "no-underline"
+            className={` flex items-center justify-center gap-1 tags-link-btn  ${
+              href ? "hover:underline text-blue-500  tags-btn-link " : "no-underline"
             } ${
               !position || position === "before"
-                ? "flex-row-reverse"
+                ? "flex-row-reverse tag-position "
                 : "flex-row"
             }`}
           >
@@ -83,7 +83,7 @@ function Tags({
           </a>
           {removable && (
             <button
-              className='text-sm leading-none px-1 focus:outline-none pointer-events-auto hover:text-gray-500'
+              className='tag-removed text-sm leading-none px-1 focus:outline-none pointer-events-auto hover:text-gray-500'
               onClick={() => setTagRemove(false)}
             >
               &times;

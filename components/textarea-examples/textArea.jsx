@@ -44,9 +44,9 @@ function TextArea({
   };
 
   return (
-    <div className='flex w-full flex-col'>
+    <div className='flex w-full flex-col textarea-wraper'>
       <textarea
-        className={`focus:outline-none p-3 hover:bg-gray-100 focus:bg-transparent ${
+        className={`focus:outline-none p-3 hover:bg-gray-100 focus:bg-transparent text-area ${
           textareaStyle
             ? " overflow-hidden resize-none "
             : resize === "vertical"

@@ -14,7 +14,7 @@ const AccordionPannel = ({
 }) => {
   return (
     <div
-      className={'accordion-content overflow-hidden bg-white  px-4' +  (isDisabled ? " pointer-events-none " : "")}
+      className={'accordion-content overflow-hidden bg-white  px-4 accordian-pannel ' +  (isDisabled ? " pointer-events-none " : "")}
       aria-expanded={
         isOpened
           ? show === currentTab
@@ -23,7 +23,7 @@ const AccordionPannel = ({
           : true
       }
     >
-      <p className="pt-5 pb-2 text-gray-600 font-normal break-all whitespace-pre-wrap">{children}</p>
+      <p className="pt-5 pb-2 text-gray-600 font-normal break-all whitespace-pre-wrap accordian-body ">{children}</p>
     </div>
   );
 };

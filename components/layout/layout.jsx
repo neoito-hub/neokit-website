@@ -125,6 +125,16 @@ const Layout = ({ children }) => {
                 <span className='mx-3'>Button</span>
               </a>
             </Link>
+
+            <Link href='/cards'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/cards"
+                )} `}
+              >
+                <span className='mx-3'>Cards</span>
+              </a>
+            </Link>
             <Link href='/checkbox'>
               <a
                 href='/checkbox'
@@ -184,6 +194,15 @@ const Layout = ({ children }) => {
                 <span className='mx-3'> Lozenge </span>
               </a>
             </Link>
+             <Link href='/modal-dialog'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/modal-dialog"
+                )} `}
+              >
+                <span className='mx-3'>Modal dialog</span>
+              </a>
+            </Link>
 
             <Link href='/progress-bar'>
               <a
@@ -195,15 +214,7 @@ const Layout = ({ children }) => {
               </a>
             </Link>
 
-            <Link href='/modal-dialog'>
-              <a
-                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
-                  "/modal-dialog"
-                )} `}
-              >
-                <span className='mx-3'>Modal dialog</span>
-              </a>
-            </Link>
+           
 
             <Link href='/progress-indicator'>
               <a
@@ -326,10 +337,10 @@ const Layout = ({ children }) => {
             <div className='flex items-center'>
               <button
                 onClick={() => setSidebarOpen(true)}
-                className='text-gray-500 focus:outline-none lg:hidden'
+                className={'text-gray-500 group focus:outline-none lg:hidden  p-2 flex  item-center justify-center rounded border border-gray-100 shadow hover:bg-' + themeColor}
               >
                 <svg
-                  className='h-6 w-6'
+                  className={'h-6 w-6 fill-current group-hover:text-white text-' + themeColor}
                   viewBox='0 0 24 24'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'

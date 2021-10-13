@@ -88,19 +88,19 @@ function Avatars({
   };
 
   return (
-    <div className='flex flex-col h-auto w-auto'>
-      <div className='rounded-full relative '>
+    <div className='flex flex-col h-auto w-auto avatar-wrapper'>
+      <div className='rounded-full relative avatar-body'>
         {status &&
           ((statusImage && (
             <span
               className={`w-4 h-4  rounded-full border-3 bg-gray-300  border-white absolute flex items-center justify-center ${getPropsStyle()}`}
             >
-              <img src={statusImage} className='h-full w-full max-w-max'></img>
+              <img src={statusImage} className='h-full w-full max-w-max avatar-image '></img>
             </span>
           )) ||
             (!statusImage && (
               <span
-                className={`w-4 h-4  rounded-full border-3  border-white   absolute ${getPropsStyle()}`}
+                className={`w-4 h-4  rounded-full border-3 border-white absolute avatar-status ${getPropsStyle()}`}
                 style={{ backgroundColor: avatarColor }}
               ></span>
             )))}
@@ -108,7 +108,7 @@ function Avatars({
           src={avatarpath}
           width={avatarWidth}
           height={avatarHeight}
-          className='max-w-max object-cover rounded-full'
+          className='max-w-max object-cover rounded-full avatar-image '
           style={{width:avatarWidth+'px' , height:avatarHeight+"px" }}
         ></img>
       </div>

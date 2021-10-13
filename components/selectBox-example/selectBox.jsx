@@ -5,9 +5,9 @@ const SelectBox = ({...props}) => {
    
       
     return (
-        <div>
-           <Select {...props} className="h-10"/>
-        </div>
+        <>
+           <Select {...props} className="h-10 react-select-wraper"/>
+        </>
     )
 }
 

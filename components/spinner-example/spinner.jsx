@@ -2,57 +2,57 @@ import React from "react";
 
 const Spinner = ({ size, appearance }) => {
   return (
-    <div>
+    <div className="loader">
       {appearance?.trim() === "loader" ? (
-        <div class=' flex justify-start items-start w-max'>
+        <div class=" flex justify-start items-start w-max spinner-wrapper">
           <div
             class={`animate-spin rounded-full  border-b-2 border-gray-900  ${
               typeof size === "string"
                 ? size?.trim() === "xsmall"
-                  ? " h-4 w-4 "
+                  ? " h-4 w-4 spinner-xsmall "
                   : size?.trim() === "small"
-                  ? " w-7 h-7 "
+                  ? " w-7 h-7 spinner-small "
                   : size?.trim() === "medium"
-                  ? " w-10 h-10 "
+                  ? " w-10 h-10 spinner-medium "
                   : size?.trim() === "large"
-                  ? " w-12 h-12 "
+                  ? " w-12 h-12 spinner-large "
                   : size?.trim() === "xlarge"
-                  ? " w-16 h-16 "
+                  ? " w-16 h-16 spinner-xlarge "
                   : " w-7 h-7 "
-                : " w-7 h-7 "
+                : " w-7 h-7 spinner-defualt "
             } `}
             style={{
               width: typeof size === "number" ? size : "",
-              height: typeof size === "number" ? size : ""
+              height: typeof size === "number" ? size : "",
             }}
           ></div>
         </div>
       ) : appearance?.trim() === "dual-loader" ? (
-        <div class=' flex justify-start items-start w-max'>
+        <div class=" flex justify-start items-start w-max dual-loader">
           <div
             class={`animate-spin rounded-full  border-t-2 border-b-2 border-purple-500  ${
               typeof size === "string"
                 ? size?.trim() === "xsmall"
-                  ? " h-4 w-4 "
+                  ? " h-4 w-4 spinner-xsmall "
                   : size?.trim() === "small"
-                  ? " w-7 h-7 "
+                  ? " w-7 h-7 spinner-small "
                   : size?.trim() === "medium"
-                  ? " w-10 h-10 "
+                  ? " w-10 h-10 spinner-medium "
                   : size?.trim() === "large"
-                  ? " w-12 h-12 "
+                  ? " w-12 h-12 spinner-large "
                   : size?.trim() === "xlarge"
-                  ? " w-16 h-16 "
+                  ? " w-16 h-16 spinner-xlarge "
                   : " w-7 h-7 "
-                : " w-7 h-7 "
+                : " w-7 h-7 spinner-defualt "
             } `}
             style={{
               width: typeof size === "number" ? size : "",
-              height: typeof size === "number" ? size : ""
+              height: typeof size === "number" ? size : "",
             }}
           ></div>
         </div>
-      ) :(
-        <span className=' w-max  flex items-center justify-center '>
+      ) : (
+        <span className=" w-max  flex items-center justify-center ">
           {/* <svg
           className={`animate-spin  text-blue-500  ${
             typeof size === "string" &&
@@ -91,30 +91,30 @@ const Spinner = ({ size, appearance }) => {
           ></path>
         </svg> */}
           <svg
-            viewBox='0 0 50 50'
+            viewBox="0 0 50 50"
             className={`spinner   text-blue-500  ${
               typeof size === "string"
                 ? size?.trim() === "xsmall"
-                  ? " h-4 w-4 "
+                  ? " h-4 w-4 spinner-xsmall "
                   : size?.trim() === "small"
-                  ? " w-7 h-7 "
+                  ? " w-7 h-7 spinner-small "
                   : size?.trim() === "medium"
-                  ? " w-10 h-10 "
+                  ? " w-10 h-10 spinner-medium "
                   : size?.trim() === "large"
-                  ? " w-12 h-12 "
+                  ? " w-12 h-12 spinner-large "
                   : size?.trim() === "xlarge"
-                  ? " w-16 h-16 "
+                  ? " w-16 h-16 spinner-xlarge "
                   : " w-7 h-7 "
-                : " w-7 h-7 "
+                : " w-7 h-7 spinner-defualt "
             }`}
           >
             <circle
-              class='path'
-              cx='25'
-              cy='25'
-              r='20'
-              fill='none'
-              stroke-width='5'
+              class="path"
+              cx="25"
+              cy="25"
+              r="20"
+              fill="none"
+              stroke-width="5"
             ></circle>
           </svg>
         </span>

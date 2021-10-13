@@ -57,14 +57,14 @@ function Checkboxes({
   };
 
   return (
-    <div className='text-sm font-normal text-gray-700 '>
+    <div className='text-sm font-normal text-gray-700 checkbox-wrapper '>
       <label
-        className={`flex gap-3 items-center  ${
-          isDisabled ? " cursor-not-allowed  opacity-50" : " cursor-pointer "
+        className={`flex gap-3 items-center checkbox-label  ${
+          isDisabled ? " cursor-not-allowed  opacity-50 disabled-checkbox " : " cursor-pointer "
         }`}
       >
         <input
-          className={`${checkboxSize}`}
+          className={`checkbox ${checkboxSize}`}
           type='checkbox'
           checked={checked && !defaultChecked ? checked : val}
           id={id}
@@ -73,7 +73,7 @@ function Checkboxes({
           onChange={() => handleChange()}
         />
         <span
-          className={`${
+          className={` checkbox-text ${
             size === "small"
               ? " text-xs "
               : size === "large"

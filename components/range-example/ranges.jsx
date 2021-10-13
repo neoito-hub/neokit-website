@@ -6,10 +6,10 @@ function Ranges({ step, min, max, onChange, value, isDisabled }) {
     else setVal(event.target.value);
   };
   return (
-    <div>
-      <label className={"flex items-center gap-3"}>
+    <>
+      <label className={"flex items-center gap-3 range-wraper "}>
         <input
-          className={` ${isDisabled ? "cursor-not-allowed" : "cursor-pointer"}  w-full `}
+          className={` ${isDisabled ? "cursor-not-allowed" : "cursor-pointer"}  w-full range-component `}
           id='typeinp'
           type='range'
           disabled={isDisabled}
@@ -21,7 +21,7 @@ function Ranges({ step, min, max, onChange, value, isDisabled }) {
         />
         {/* {rangeValue} */}
       </label>
-    </div>
+    </>
   );
 }
 

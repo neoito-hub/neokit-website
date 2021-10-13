@@ -5,12 +5,12 @@ const TabItem = ({ children, openTab, index, setOpenTab, head, tooltip }) => {
   const color = "pink";
   return (
     <>
-      <li className={"-mb-px mr-2 last:mr-0 relative top-0.5 cursor-pointer "}>
+      <li className={"-mb-px mr-2 last:mr-0 relative top-0.5 cursor-pointer tab-item   "}>
         {tooltip ? (
           <Tooltips content={tooltip ? tooltip : ""}>
             <a
               className={
-                "text-xs font-bold capitalize  py-3  block leading-normal border-b-2 " +
+                "text-xs font-bold capitalize  py-3  block leading-normal border-b-2 tab-link " +
                 (openTab === index
                   ? "text-blue-600  border-blue-600"
                   : "text-gray-600 border-transparent")
@@ -25,7 +25,7 @@ const TabItem = ({ children, openTab, index, setOpenTab, head, tooltip }) => {
         ) : (
           <a
             className={
-              "text-xs font-bold capitalize  py-3  block leading-normal border-b-2 " +
+              "text-xs font-bold capitalize  py-3  block leading-normal border-b-2 tab-link " +
               (openTab === index
                 ? "text-blue-600  border-blue-600"
                 : "text-gray-600 border-transparent")

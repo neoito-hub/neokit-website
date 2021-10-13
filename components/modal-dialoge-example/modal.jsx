@@ -22,15 +22,15 @@ const Modal = ({ modal, children, onchange  , styles , appearance , ...props }) 
     onchange(false);
   };
   return (
-    <div>
+    <>
       {modal ? (
-        <div>
+        <div className="modal-container">
           <div
             className={
-              "justify-center items-center flex overflow-x-hidden overflow-y-auto fixed  outline-none focus:outline-none model-wrapper inset-0 m-auto modal-translation w-max modal-wrapper rounded-lg bg-white "
+              "justify-center items-center flex overflow-x-hidden overflow-y-auto fixed outline-none focus:outline-none model-wrapper inset-0 m-auto modal-translation w-max modal-wrapper rounded-lg bg-white "
             }
           >
-            <div className={`relative w-auto mx-auto  modal-overflow ${appearance?.trim()=== 'small' ? 'max-w-sm' : appearance?.trim()=== 'large' ? 'max-w-3xl' : appearance?.trim()=== 'x-large' ? 'max-w-6xl' : 'max-w-xl' }`}  style={styles} >
+            <div className={`relative w-auto mx-auto  modal-overflow ${appearance?.trim()=== 'small' ? 'max-w-sm small-container ' : appearance?.trim()=== 'large' ? 'max-w-3xl large-container ' : appearance?.trim()=== 'x-large' ? 'max-w-6xl x-large ' : 'max-w-xl default-container ' }`}  style={styles} >
               {/*content*/} 
               {children}
             </div>
@@ -46,7 +46,7 @@ const Modal = ({ modal, children, onchange  , styles , appearance , ...props }) 
           ></div>
         </div>
       ) : null}
-    </div>
+    </>
   );
 };
 

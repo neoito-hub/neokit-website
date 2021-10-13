@@ -24,34 +24,34 @@ function Buttons({
   const getProps = () => {
     if (appearance === "default" || !appearance) {
       setButtonColor(" text-gray-700 ");
-      setButtonBGColor(" bg-gray-200 hover:bg-gray-300 ");
+      setButtonBGColor(" bg-gray-200 hover:bg-gray-300 default-btn  ");
     } else if (appearance === "primary") {
       setButtonColor(" text-white");
-      setButtonBGColor(" bg-blue-700 hover:opacity-70 ");
+      setButtonBGColor(" bg-blue-700 hover:opacity-70 primary-btn ");
     } else if (appearance === ("subtle" || "secondary")) {
       setButtonColor(" text-gray-700 ");
-      setButtonBGColor("bg-transparent hover:bg-gray-200 ");
+      setButtonBGColor("bg-transparent hover:bg-gray-200 subtle-btn ");
     } else if (appearance === "link") {
-      setButtonColor(" text-blue-700 ");
+      setButtonColor(" text-blue-700 btn-link ");
       setButtonBGColor(" bg-transparent hover:underline ");
     } else if (appearance === ("subtle-link" || "secondary-link")) {
       setButtonColor(" text-gray-500");
-      setButtonBGColor(" bg-transparent hover:underline ");
+      setButtonBGColor(" bg-transparent hover:underline subtle-link-btn ");
     } else if (appearance === "warning") {
       setButtonColor(" text-gray-700");
-      setButtonBGColor(" bg-yellow-400 hover:opacity-70 ");
+      setButtonBGColor(" bg-yellow-400 hover:opacity-70 warning-btn ");
     } else if (appearance === "danger") {
       setButtonColor(" text-white");
-      setButtonBGColor(" bg-red-500 hover:opacity-70 ");
+      setButtonBGColor(" bg-red-500 hover:opacity-70 danger-btn ");
     }
   };
   const getAttributes = () => {
     if (isDisabled) {
-      setButtonColor(" text-gray-700 cursor-not-allowed ");
+      setButtonColor(" text-gray-700 cursor-not-allowed btn-disabled ");
       setButtonBGColor(" bg-gray-300 opacity-60 ");
     } else if (isSelected) {
       setButtonColor(" text-white");
-      setButtonBGColor(" bg-blue-900 hover:opacity-100  sijo");
+      setButtonBGColor(" bg-blue-900 hover:opacity-100 btn-selected ");
     } else if (isLoading) {
     }
   };
@@ -61,10 +61,10 @@ function Buttons({
   }
 
   return (
-    <div>
+    <>
       {(appearance && appearance === "link") ||
       appearance === ("subtle-link" || "secondary-link") ? (
-        <a href={href}>
+        <a href={href} className="button-link">
           <button
             type='button'
             tabIndex='0'
@@ -75,7 +75,7 @@ function Buttons({
               buttonBGColor
             }
           >
-            <span className='flex-grow flex-shrink my-0 mx-0.5 truncate transition '>
+            <span className='flex-grow flex-shrink my-0 mx-0.5 truncate transition link-text '>
               {children}
             </span>
           </button>
@@ -87,8 +87,8 @@ function Buttons({
            {...props}
           className={
             `rounded items-baseline inline-flex px-2.5   align-middle  truncate text-center  font-medium py-1.5 text-sm tracking-wide focus:outline-none ${
-              isLoading ? " cursor-default" : "cursor-pointer "
-            }  ${shouldFitContainer ? " w-full" : " w-auto "}  ${isDisabled ?  appearance === "primary" ? ' text-white  cursor-not-allowed  bg-gray-300 opacity-60 ' : 'text-gray-700 cursor-not-allowed  bg-gray-300 opacity-60 ': '' } ` +
+              isLoading ? " cursor-default loading-button " : "cursor-pointer "
+            }  ${shouldFitContainer ? " w-full btn-full " : " w-auto btn-auto "}  ${isDisabled ?  appearance === "primary" ? ' text-white  cursor-not-allowed  bg-gray-300 opacity-60 ' : 'text-gray-700 cursor-not-allowed  bg-gray-300 opacity-60 ': '' } ` +
             buttonColor +
             buttonBGColor
           }
@@ -96,7 +96,7 @@ function Buttons({
           disabled={isDisabled}
         >
           {isLoading ? (
-            <span className=' w-20 h-5 flex items-center justify-center'>
+            <span className=' w-20 h-5 flex items-center justify-center loading-btn'>
               <svg
                 className='animate-spin h-5 w-5 text-white'
                 xmlns='http://www.w3.org/2000/svg'
@@ -119,16 +119,16 @@ function Buttons({
               </svg>
             </span>
           ) : (
-            <div className={`flex items-center justify-center gap-1 ${icon && position === 'after' ? 'flex-row-reverse' : 'flex-row'} `}>
+            <div className={`flex items-center justify-center gap-1 btn-icon ${icon && position === 'after' ? 'flex-row-reverse' : 'flex-row'} `}>
              { icon && <img src={icon} className='h-full w-full max-w-max'></img>}
-              <span className='flex flex-grow flex-shrink my-0 mx-0.5 truncate transition  '>
+              <span className='flex flex-grow flex-shrink my-0 mx-0.5 truncate transition btn-text  '>
                 {children}
               </span>
             </div>
           )}
         </button>
       )}
-    </div>
+    </>
   );
 }
 

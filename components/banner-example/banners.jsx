@@ -27,13 +27,13 @@ useEffect(() => {
      }
   };
     return (
-        <div>
-           <div className={"flex items-center justify-center  hover:overflow-auto h-12 px-10 rounded" + bannerBGColor }>
-              { appearance != 'announcement' && ( <span className="text-base">
+        <div className="banner-wrapper">
+           <div className={"flex items-center justify-center  hover:overflow-auto h-12 px-10 rounded banner-body " + bannerBGColor }>
+              { appearance != 'announcement' && ( <span className="text-base banner-icon">
                     <img src={bannerIcon} alt={appearance} className=' max-w-max'></img>
                 </span>
                 )} 
-                <div className={`p-1 truncate  flex-initial text-sm font-medium tracking-wide  ${appearance === 'announcement' ? 'hover:whitespace-normal hover:mt-10':''}`} style={{ color: bannerColor }}>
+                <div className={`p-1 truncate  flex-initial text-sm font-medium tracking-wide banner-title  ${appearance === 'announcement' ? 'hover:whitespace-normal hover:mt-10':''}`} style={{ color: bannerColor }}>
                {children}
                 </div>
              </div>

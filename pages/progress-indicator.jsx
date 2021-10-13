@@ -22,7 +22,7 @@ function ProgressIndicator() {
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-  <Buttons isDisabled={selectedIndex === 2}>
+  <Buttons isDisabled={selectedIndex === 1}>
     Prev
   </Buttons>
 </span>
@@ -65,7 +65,7 @@ onChange={(values) => setSelectedIndex(values)}
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-  <Buttons isDisabled={selectedIndex === 2}>
+  <Buttons isDisabled={selectedIndex === 1}>
     Prev
   </Buttons>
 </span>
@@ -109,7 +109,7 @@ return (
           return (
           <div className='flex justify-between items-center'>
           <span onClick={() => dotPrevClicked()}>
-            <Buttons isDisabled={selectedIndex === 2}>
+            <Buttons isDisabled={selectedIndex === 1}>
               Prev
             </Buttons>
           </span>
@@ -153,7 +153,7 @@ function InvertedProgressIndicator() {
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-<Buttons isDisabled={selectedIndex === 2}>
+<Buttons isDisabled={selectedIndex === 1}>
   Prev
 </Buttons>
 </span>
@@ -197,7 +197,7 @@ function SmallProgressIndicator() {
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-<Buttons isDisabled={selectedIndex === 2}>
+<Buttons isDisabled={selectedIndex === 1}>
   Prev
 </Buttons>
 </span>
@@ -242,7 +242,7 @@ function DefaultProgressIndicator() {
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-<Buttons isDisabled={selectedIndex === 2}>
+<Buttons isDisabled={selectedIndex === 1}>
   Prev
 </Buttons>
 </span>
@@ -286,7 +286,7 @@ export default  DefaultProgressIndicator;
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-  <Buttons isDisabled={selectedIndex === 2}>
+  <Buttons isDisabled={selectedIndex === 1}>
     Prev
   </Buttons>
 </span>
@@ -331,7 +331,7 @@ import React, { useState } from "react";
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-  <Buttons isDisabled={selectedIndex === 2}>
+  <Buttons isDisabled={selectedIndex === 1}>
     Prev
   </Buttons>
 </span>
@@ -376,7 +376,7 @@ import React, { useState } from "react";
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-  <Buttons isDisabled={selectedIndex === 2}>
+  <Buttons isDisabled={selectedIndex === 1}>
     Prev
   </Buttons>
 </span>
@@ -419,7 +419,7 @@ import React, { useState } from "react";
 return (
 <div className='flex justify-between items-center'>
 <span onClick={() => dotPrevClicked()}>
-  <Buttons isDisabled={selectedIndex === 2}>
+  <Buttons isDisabled={selectedIndex === 1}>
     Prev
   </Buttons>
 </span>
@@ -462,7 +462,7 @@ export default CompactProgressIndicator;
   return (
   <div className='flex justify-between items-center'>
   <span onClick={() => dotPrevClicked()}>
-    <Buttons isDisabled={selectedIndex === 2}>
+    <Buttons isDisabled={selectedIndex === 1}>
       Prev
     </Buttons>
   </span>
@@ -540,7 +540,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span >
-              <Buttons isDisabled={selectedIndex === 2} onClick={() => dotPrevClicked()}> Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1} onClick={() => dotPrevClicked()}> Prev </Buttons>
             </span>
 
             <ProgressIndicators
@@ -571,7 +571,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}> Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1}> Prev </Buttons>
             </span>
 
             {/* <ProgressIndicators value={5}   appearance={'primary'} onChange={(values)=>setButtonState(values)} valueCount={(count)=> setButtonCount(count)}/> */}
@@ -603,7 +603,7 @@ export default InteractionProgressIndicator;
         <div className='py-2 px-2' style={{ backgroundColor: "#1b2638" }}>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2} appearance={"primary"}>
+              <Buttons isDisabled={selectedIndex === 1} appearance={"primary"}>
                 {" "}
                 Prev{" "}
               </Buttons>
@@ -647,7 +647,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}> Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1}> Prev </Buttons>
             </span>
             <ProgressIndicators
               selectedIndex={selectedIndex}
@@ -677,7 +677,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}> Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1}> Prev </Buttons>
             </span>
 
             {/* <ProgressIndicators value={5}   appearance={'primary'} onChange={(values)=>setButtonState(values)} valueCount={(count)=> setButtonCount(count)}/> */}
@@ -708,7 +708,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}> Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1}> Prev </Buttons>
             </span>
 
             {/* <ProgressIndicators value={5}   appearance={'primary'} onChange={(values)=>setButtonState(values)} valueCount={(count)=> setButtonCount(count)}/> */}
@@ -747,7 +747,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}> Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1}> Prev </Buttons>
             </span>
 
             <ProgressIndicators
@@ -778,7 +778,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}> Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1}> Prev </Buttons>
             </span>
             <ProgressIndicators
               selectedIndex={selectedIndex}
@@ -808,7 +808,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}> Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1}> Prev </Buttons>
             </span>
 
             {/* <ProgressIndicators value={5}   appearance={'primary'} onChange={(values)=>setButtonState(values)} valueCount={(count)=> setButtonCount(count)}/> */}
@@ -840,7 +840,7 @@ export default InteractionProgressIndicator;
         <div className='py-2'>
           <div className='flex justify-between items-center'>
             <span onClick={() => dotPrevClicked()}>
-              <Buttons isDisabled={selectedIndex === 2}>Prev </Buttons>
+              <Buttons isDisabled={selectedIndex === 1}>Prev </Buttons>
             </span>
 
             {/* <ProgressIndicators value={5}   appearance={'primary'} onChange={(values)=>setButtonState(values)} valueCount={(count)=> setButtonCount(count)}/> */}

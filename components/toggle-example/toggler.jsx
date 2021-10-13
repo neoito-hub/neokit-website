@@ -15,12 +15,12 @@ function Toggler({ color, name, id, onChange, value, disabled, icon }) {
     if (value) setToggleActive(value);
   }, []);
   return (
-    <div>
+    <>
       <div
         name={name}
         id={id}
-        class={`flex justify-between items-center w-max relative  ${
-          disabled ? "  opacity-40 cursor-not-allowed" : " cursor-pointer"
+        class={`flex justify-between items-center w-max relative  toggle-wraper ${
+          disabled ? "  opacity-40 cursor-not-allowed toggle-disabled " : " cursor-pointer"
         } `}
         // onClick={() => {setToggleActive(!toggleActive); onChange();}}
         onClick={(e) =>{ disabled ?   e.stopPropagation() : handleChange()}}
@@ -31,19 +31,19 @@ function Toggler({ color, name, id, onChange, value, disabled, icon }) {
        {(icon && !toggleActive )&& <img src='assets/close.svg' width="8" height="8" className=' max-w-max'></img>}
         </span>
         <div
-          class={`w-11 h-6 flex items-center bg-gray-300 rounded-full p-1 duration-300 ease-in-out" ${
+          className={`w-11 h-6 flex items-center bg-gray-300 rounded-full p-1 duration-300 ease-in-out" ${
             toggleActive ? "bg-green-400" : ""
           } `}
           style={{ backgroundColor: toggleActive ? getColor() : "#C0C0C0" }}
         >
           <div
-            class={`bg-white w-4 h-4 rounded-full shadow-md transform duration-300 ease-in-out" ${
+            className={`bg-white w-4 h-4 rounded-full shadow-md transform duration-300 ease-in-out" ${
               toggleActive ? "translate-x-5" : ""
             }`}
           ></div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

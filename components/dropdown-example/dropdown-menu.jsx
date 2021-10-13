@@ -41,11 +41,11 @@ const DropdownMenu = ({
 
   return (
     <>
-      <div className="flex flex-wrap">
-        <div className="w-full px-4">
+      <div className="flex flex-wrap w-full px-4 dropdown-wraper">
+
           <div
             className={
-              "relative inline-flex align-middle " +
+              "relative inline-flex align-middle dropdown-body " +
               (shouldFitContainer ? "w-full " : "")
             }
           >
@@ -58,7 +58,7 @@ const DropdownMenu = ({
               {!type || type?.trim() === "button" ? (
                 <button
                   className={
-                    " font-bold  text-sm px-6 py-3 rounded shadow  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150   " +
+                    " font-bold  text-sm px-6 py-3 rounded shadow  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 dropdown-btn-text   " +
                     (dropdownPopoverShow
                       ? "bg-blue-850 text-blue-50"
                       : " bg-blue-50  text-gray-500")
@@ -73,7 +73,7 @@ const DropdownMenu = ({
                   }}
                 >
                   <div className="flex item-center justify-between  gap-2">
-                    <span className="flex item-center justify-between">
+                    <span className="flex item-center justify-between  btn-content">
                       {appearance?.trim() === "more" ? (
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const DropdownMenu = ({
                         [trigger]
                       )}
                     </span>{" "}
-                    <span className="flex item-center justify-between  gap-2">
+                    <span className="flex item-center justify-between  gap-2 btn-down-icon">
                       {isArrow === false ? (
                         ""
                       ) : dropdownPopoverShow ? (
@@ -138,15 +138,15 @@ const DropdownMenu = ({
               )}
 
               <div
-                className={
+                className={ 
                   (dropdownPopoverShow ? "block " : "hidden ") +
-                  (shouldFitContainer ? "  fit-continer " : "")
+                  (shouldFitContainer ? "  fit-continer " : "") + 'dropdown-list-wrapper'
                 }
               >
                 <ul
                   ref={popoverDropdownRef}
                   className={
-                    " border text-base z-50 float-left py-2 list-none text-left rounded mt-1 bg-white shadow-xl top-4 dropdownList-wrapper modal-wrapper dropdown-container  overflow-y-scroll" +
+                    " dropdown-list border text-base z-50 float-left py-2 list-none text-left rounded mt-1 bg-white shadow-xl top-4 dropdownList-wrapper modal-wrapper dropdown-container  overflow-y-auto" +
                     (shouldFitContainer ? " w-full" : "")
                   }
                   style={{ minWidth: "5rem", top: "10px" }}
@@ -165,7 +165,6 @@ const DropdownMenu = ({
               </div>
             </OutsideAlerter>
           </div>
-        </div>
       </div>
     </>
   );

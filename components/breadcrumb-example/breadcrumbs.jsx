@@ -21,7 +21,7 @@ function Breadcrumbs( {maxItems,children}) {
         
     }, [breadcrumbMaxView])
     return (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 breadcrumb-wrapper">
            {/* {children(breadcrumbCount)} */}
            {children.map((child, index) =>
             React.cloneElement(child, {child, index, breadcrumbCount,breadcrumbView ,setBreadcrumbView,breadcrumbMaxView,breadcrumbType})
