@@ -315,7 +315,15 @@ const Layout = ({ children }) => {
                 <span className='mx-3'>Toggle</span>
               </a>
             </Link>
-
+            <Link href='/toast'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/toast"
+                )} `}
+              >
+                <span className='mx-3'>Toast</span>
+              </a>
+            </Link>
             <Link href='/tooltip'>
               <a
                 className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(

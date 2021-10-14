@@ -7,7 +7,7 @@ module.exports = {
         primary: "#172b4d",
         secondary: "#505f79",
         "blue-50": "#f4f5f7",
-        "blue-850":'#253858'
+        "blue-850": "#253858",
       },
       borderWidth: {
         3: "3px",
@@ -67,8 +67,10 @@ module.exports = {
     display: ["responsive", "hover"],
     overflow: ["responsive", "hover"],
     margin: ["responsive", "hover"],
+    opacity: ["responsive", "hover"],
     cursor: ["hover"],
     extend: {},
   },
+  darkMode: "media",
   plugins: [],
 };

@@ -1,72 +1,106 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import ToastItem from "./toastItem";
 
+const Toast = ({
+  type,
+  id,
+  position,
+  title,
+  description,
+  isClose,
+  autoDeleteTime,
+  autoDelete,
+}) => {
+  const [list, setList] = useState([]);
+  const [toastPosition, setToastPosition] = useState("top-right");
+  const [toastTitle, setToastTitle] = useState("");
+  const [toastDescription, setToastDescription] = useState("");
+  let [checkValue, setCheckValue] = useState(false);
+  // const [autoDismissTime, setAutoDismissTime] = useState(1000);
+  const [isCloseIcon, setIsCloseIcon] = useState(true);
+  let toastProperties = null;
+  const autoDismissTime = 2000;
+  const selectPosition = (e) => {};
 
-const Toast = ({props, toastList, position, autoDelete, dismissTime } )=> {   
-    const [list, setList] = useState(toastList);
+  const showToast = (type) => {
+    const id = Math.floor(Math.random() * 101 + 1);
 
-    useEffect(() => {
-        setList([...toastList]);
+    switch (type.toLowerCase().trim()) {
+      case "success":
+        toastProperties = {
+          id,
+          title: toastTitle ? toastTitle : "Success",
+          description: toastDescription
+            ? toastDescription
+            : "This is a success toast component",
+          backgroundColor: "#5cb85c",
+          icon: "assets/toast-check.svg",
+        };
+        break;
+      case "error":
+        toastProperties = {
+          id,
+          title: toastTitle ? toastTitle : "Danger",
+          description: toastDescription
+            ? toastDescription
+            : "This is a error toast component",
+          backgroundColor: "#d9534f",
+          icon: "assets/toast-error.svg",
+        };
+        break;
+      case "info":
+        toastProperties = {
+          id,
+          title: toastTitle ? toastTitle : "Info",
+          description: toastDescription
+            ? toastDescription
+            : "This is an info toast component",
+          backgroundColor: "#5bc0de",
+          icon: "assets/toast-info.svg",
+        };
+        break;
+      case "warning":
+        toastProperties = {
+          id,
+          title: toastTitle ? toastTitle : "Warning",
+          description: toastDescription
+            ? toastDescription
+            : "This is a warning toast component",
+          backgroundColor: "#f0ad4e",
+          icon: "assets/toast-warning.svg",
+        };
+        break;
 
-        // eslint-disable-next-line
-    }, [toastList]);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (autoDelete && toastList.length && list.length) {
-                deleteToast(toastList[0].id);
-            }
-        }, dismissTime);
-        
-        return () => {
-            clearInterval(interval);
-        }
-
-        // eslint-disable-next-line
-    }, [toastList, autoDelete, dismissTime, list]);
-
-    const deleteToast = id => {
-        const listItemIndex = list.findIndex(e => e.id === id);
-        const toastListItem = toastList.findIndex(e => e.id === id);
-        list.splice(listItemIndex, 1);
-        toastList.splice(toastListItem, 1);
-        setList([...list]);
+      default:
+        setList([]);
     }
 
-    return (
-        <>
-            <div className={`notification-container ${position}`}>
-                {
-                    list.map((toast, i) =>     
-                        <div 
-                            key={i}
-                            className={`notification toast ${position}`}
-                            style={{ backgroundColor: toast.backgroundColor }}
-                        >
-                            <button onClick={() => deleteToast(toast.id)}>
-                                X
-                            </button>
-                            <div className="notification-image">
-                               &times;
-                            </div>
-                            <div>
-                                <p className="notification-title">{toast.title}</p>
-                                <p className="notification-message">
-                                    {toast.description}
-                                </p>
-                            </div>
-                        </div>
-                    )
-                }
-            </div>
-        </>
-    );
-}
+    setList([...list, toastProperties]);
+  };
 
-Toast.propTypes = {
-    position: PropTypes.string,
-    autoDelete: PropTypes.bool,
-    dismissTime: PropTypes.number
-}
+  useEffect(() => {
+    setToastTitle(title);
+    setToastDescription(description);
+    setIsCloseIcon(isCloseIcon);
+    // if(autoDeleteTime) setAutoDismissTime(autoDeleteTime)
+    setList([]);
+  }, [position, title, description, isClose]);
+  useEffect(() => {
+    if (type) showToast(type);
+  }, [type,id]);
+
+  return (
+    <div className="app">
+      <ToastItem
+        type={type ? type.toLowerCase().trim() : "success"}
+        isClose={isCloseIcon}
+        toastList={list}
+        position={position ? position : toastPosition}
+        autoDismiss={autoDelete ? autoDelete : autoDelete===false? false :true}
+        dismissTime={autoDeleteTime ? autoDeleteTime : autoDismissTime}
+      />
+    </div>
+  );
+};
 
 export default Toast;
