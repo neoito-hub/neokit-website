@@ -203,7 +203,15 @@ const Layout = ({ children }) => {
                 <span className='mx-3'>Modal dialog</span>
               </a>
             </Link>
-
+            <Link href='/pagination'>
+              <a
+                className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
+                  "/pagination"
+                )} `}
+              >
+                <span className='mx-3'>Pagination</span>
+              </a>
+            </Link>
             <Link href='/progress-bar'>
               <a
                 className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
@@ -213,9 +221,6 @@ const Layout = ({ children }) => {
                 <span className='mx-3'>Progress bar</span>
               </a>
             </Link>
-
-           
-
             <Link href='/progress-indicator'>
               <a
                 className={`flex items-center mt-4 py-2 px-6 focus:outline-none   bg-opacity-50  rounded ${getLocation(
