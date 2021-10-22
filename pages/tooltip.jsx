@@ -24,10 +24,10 @@ function Tooltip() {
   export TooltipTopExample() => ( <
       Tooltips content = "Hello World"
       position = "top" >
-      <Buttons appearance = 'primary' > Hover over me < /Buttons> 
+      <Buttons appearance = 'primary'> Hover over me < /Buttons> 
       </Tooltips>
-  );
-                          `;
+  ); `;
+  
   const BottomTooltip = `
   import React from 'react';
   import Tooltip from '@neoKit/tooltips';

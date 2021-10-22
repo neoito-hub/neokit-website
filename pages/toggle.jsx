@@ -6,7 +6,6 @@ import Toggler from "../components/toggle-example/toggler";
 function Toggle() {
   const defaulToggle = `
   import React from 'react';
-
   import Toggle from '@neoKit/toggle';
   
   export defaultToggleExample() {
@@ -17,86 +16,51 @@ function Toggle() {
     );
   }
         `;
+const colordToggle = `
+  import React from 'react';
+  import Toggle from '@neoKit/toggle';
 
-  const colordToggle = `
-        import React from 'react';
-        
-        import Toggle from '@neoKit/toggle';
-        
-        export coloredExample() {
-          return (
-            <>
-            <Toggler
-            name='toggle'
-            id='toggleID'
-            color='red'
-            onChange={(value) => {}}
-            value={true}
-          ></Toggler>
-            </>
-          );
-        }
-              `;
+  export coloredExample() {
+     return (
+      <>
+        <Toggler name='toggle' id='toggleID' color='red' onChange={(value) => {}}  value={true}></Toggler>
+      </>
+          );}`;
 
-  const disabledToggle = `
+const disabledToggle = `
 import React from 'react';
-
 import Toggle from '@neoKit/toggle';
 
 export diabledToggleExample() {
   return (
     <>
-    <Toggler
-    name='toggle'
-    id='toggleID'
-    disabled
-    onChange={(value) => {}}
-    value={true}
-  ></Toggler>
+    <Toggler name='toggle' id='toggleID' disabled onChange={(value) => {}} value={true}></Toggler>
     </>
-  );
-}
-      `;
+  );}`;
 
-  const toggleState = `
-      import React from 'react';
-      
-      import Toggle from '@neoKit/toggle';
-      
-      export toggleStateExample() {
-        return (
+const toggleState = `
+  import React from 'react';
+  import Toggle from '@neoKit/toggle';
+
+    export toggleStateExample() {
+      return (
           <>
-          <Toggler
-          name='toggle'
-          id='toggleID'
-          disabled
-          value ={true}
-          onChange={(value) => {}}
-          value={true}
-        ></Toggler>
+          <Toggler name='toggle' id='toggleID' disabled value ={true} onChange={(value) => {}} value={true}></Toggler>
           </>
         );
       }
             `;
-  const toggleIcon = `
-            import React from 'react';
-            import Toggle from '@neoKit/toggle';
-            
-            export toggleStateExample() {
-              return (
-                <>
-                <Toggler
-                name='toggle'
-                id='toggleID'
-                disabled
-               icon={true}
-                onChange={(value) => {}}
-                value={true}
-              ></Toggler>
-                </>
-              );
-            }
-                  `;
+const toggleIcon = `
+  import React from 'react';
+  import Toggle from '@neoKit/toggle';
+    export toggleStateExample() {
+      return (
+        <>
+          <Toggler name='toggle' id='toggleID' disabled icon={true} onChange={(value) => {}} value={true}></Toggler>
+        </>
+        );
+        }
+        `;
 
   return (
     <div>
