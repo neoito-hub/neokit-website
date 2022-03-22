@@ -22,7 +22,7 @@ function Toggler({ color, name, id, onChange, value, disabled, icon }) {
         class={`flex justify-between items-center w-max relative  toggle-wraper ${
           disabled ? "  opacity-40 cursor-not-allowed toggle-disabled " : " cursor-pointer"
         } `}
-        // onClick={() => {setToggleActive(!toggleActive); onChange();}}
+      
         onClick={(e) =>{ disabled ?   e.stopPropagation() : handleChange()}}
         // onChange={(value) => setValues(value)}
       >
